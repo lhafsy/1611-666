@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2017-03-24 16:35:05
+Date: 2017-03-25 08:55:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,17 +20,20 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `home`;
 CREATE TABLE `home` (
-  `homeID` int(255) NOT NULL,
-  `homeSeat` varchar(255) NOT NULL,
-  `homeMsg` varchar(255) NOT NULL,
-  `homeEvaluate` varchar(255) NOT NULL,
-  `homeFeature` varchar(255) NOT NULL,
-  `homePosition` varchar(255) NOT NULL,
-  `homeSizes` varchar(255) NOT NULL,
-  `homeBvice` varchar(255) NOT NULL,
-  `homeMessage` varchar(255) NOT NULL,
-  `homeImg` varchar(255) NOT NULL,
-  PRIMARY KEY (`homeID`)
+  `homeId` int(11) NOT NULL DEFAULT '0',
+  `homeImg` varchar(255) DEFAULT NULL,
+  `homeMessage` varchar(255) DEFAULT NULL,
+  `homeBvice` varchar(255) DEFAULT NULL,
+  `homeSizes` int(11) DEFAULT NULL,
+  `homePosition` varchar(255) DEFAULT NULL,
+  `homeFeature` varchar(255) DEFAULT NULL,
+  `homeEvaluate` varchar(255) DEFAULT NULL,
+  `homeMsg` varchar(255) DEFAULT NULL,
+  `homeSeat` varchar(255) DEFAULT NULL,
+  `Maskname` varchar(255) DEFAULT NULL,
+  `MaskNumber` varchar(255) DEFAULT NULL,
+  `MaskSynopsis` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`homeId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
