@@ -2,6 +2,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	font: inherit;
 }
 a{
 	text-decoration: none;
@@ -13,14 +14,16 @@ em{
 	font-style: normal;
 }
 .bodyContext{
-	width: 100%;
+	width: 61.5rem;
 	height: 100%;
+	margin: 0 auto;
 	position: relative;
 	background: #eee;
 }
 .topFixed{
-    width: 100%;
+    width: 61.5rem;
     height: 7rem;
+    margin: 0 auto;
     z-index: 99;
     position: absolute;
     top: 0;
@@ -38,6 +41,7 @@ em{
     line-height: 4.5rem;
     padding: 0 1.7rem;
     display: inline-block;
+    opacity: 0.8;
     background: #666;
     font-size: 2.8rem;
     color: #fff;
@@ -83,79 +87,102 @@ em{
 }
 /*  顶部top   */
 .indexTop{
-	width: 100%;
+	width: 61.5rem;
+	margin: 0 auto;
     height: 36rem;
-    line-height: 36rem;
-    background: url("../img/head_bg.jpg") center center no-repeat;
-	background-size: cover;
     color: #fff;
     position: relative;
 }
-.bannerTop{
-    height: 2.8125rem;
-    line-height: 2.8125rem;
-    padding: 0 .25rem 0 .9375rem;
-}
+.imgbox{width:61.5rem;height:100%;overflow:hidden;margin:0 auto;}
+.imgbox ul{clear:both;width:184.5rem;height: 100%;overflow:hidden;}
+.imgbox ul li{float:left;width:61.5rem;height:100%;text-align:center;}
+.imgbox ul li img{width:61.5rem;height:100%;}
+
+
 .bannerContext{
 	position: relative;
     width: 100%;
-    height: 34rem;
+    height: 100%;
 }
-.bannerSign{
+.banSign{
 	position: absolute;
-    width: 34rem;
-    height: 8rem;
-    background-size: 100%;
-    font-size: 0;
-    top: 8rem;
+    width: 55%;
+    height: 20%;
+    display: inline-block;
+    margin: 0 auto;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-}
-.bannerSign > img{
-	width: 32rem;
-	height:6rem;
-	position: absolute;
-	top: 0rem;
-    left: 0rem;
+    color: #fff;
+    z-index: 99;
+    font-size: 4rem;
+    transform: translate(-50% ,-50%);
 }
 .searchBox{
 	position: absolute;
-    width: 54rem;
-    height: 7rem;
+    width: 65%;
+    height: 14%;
     margin: 0 auto;
     bottom: 3.25rem;
     left: .9375rem;
     right: .9375rem;
-    background: #fff;
     border: 0;
 }
 .icon_search{
-	width: 5rem;
-	height: 5rem;
+	width: 4rem;
+	height: 4rem;
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: 0.8rem;
+	top: 0.3rem;
+	opacity: 0.6;
 	z-index: 99;
 	display: inline-block;
 	background-image: url("../img/spritemin.svg");
     background-size: 80%;
     background-repeat: no-repeat;
-    background-position: 1rem -25rem;
+    background-position: 1rem -21rem;
 }
 .input{
-	width: 100%;
-    height: 7rem;
+	width: 80%;
+    height: 85%;
+    margin: 0 auto;
     position: absolute;
    	top: 0;
    	left: 0;
-    border: 0;
     line-height: 2.1875rem;
     padding: 0 5.5rem;
     background-color: #fff;
     font-size: 2.4rem;
-    box-sizing: border-box;
     outline: 0;
+    border-radius: 3rem;
+    border: 1px solid #eee;
 }
+.changeBan{
+	width: 15%;
+	height: 5%;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	bottom:1%;
+	z-index: 99;
+	transform: translateX(-50%);
+}
+.changeBtn{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+.changeBtn > a{
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	background: #ccc;
+	margin: 0 1rem;
+	border-radius: 50%;
+}
+.changeBan > .changeBtn:nth-child(1) > a{
+	background: green;
+}
+/*选择的分类类型*/
 .selectType{
 	margin: 0;
 	padding: 0;
@@ -330,7 +357,7 @@ em{
 	width: 100%;
 	display: inline-block;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 3rem;
+    padding-bottom: 1.3rem;
 }
 .listPic{
 	width: 30%;

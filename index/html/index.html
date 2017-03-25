@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<title>主页</title>
 	<link rel="stylesheet" href="../css/index.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/changImgTouches.js"></script>
+	<script src="../js/index.js"></script>
+	<script>
+	</script>
 </head>
 <body>
 	<div class="bodyContext">
@@ -25,22 +30,34 @@
 				<span class="myUser">APP</span>
 			</a>
 		</div>
-		<div class="indexTop">
-		<div class="bannerTop"></div>
-		<div class="bannerContext">
-			<div class="bannerSign">
-				<img src="../img/head_slogan.png" alt="">
+		<div class="indexTop" id="indexTop">
+			<h1 href="#!" class="banSign">给你一个温暖的家</h1>
+			<div class="bannerContext">
+				<div class="imgbox">
+				    <ul>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/head_bg1.jpg"></img></a></li>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/head_bg2.jpg"></img></a></li>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/head_bg3.jpg"></img></a></li>
+				    </ul>
+				</div>
+				<span id="page"></span>
+				<div class="searchBox">
+					<i class="icon_search"></i>
+					<input type="text" class="input" disabled=""
+					placeholder="输入小区或商圈开始找房咯~">
+				</div>
+				<ul class="changeBan">
+					<li class="changeBtn">
+						<a href="#!"  id="changB1" class="changB" bg="../img/head_bg1.jpg"></a>
+					</li>
+					<li class="changeBtn">
+						<a href="#!"  id="changB2" class="changB" bg="../img/head_bg2.jpg"></a>
+					</li>
+					<li class="changeBtn">
+						<a href="#!" id="changB3" class="changB" bg="../img/head_bg3.jpg"></a>
+					</li>
+				</ul>
 			</div>
-			<div class="searchBox">
-				<i class="icon_search"></i>
-				<input type="text" class="input" disabled="" placeholder="输入小区或商圈开始找房咯~">
-			</div>
-			<div class="changeImg">
-			<a href="#!">
-				<img src="../img/head_bg.jpg" alt="">
-			</a>
-		</div>
-		</div>
 		</div>
 		<div class="selectType">
 			<div class="eleSelect">
