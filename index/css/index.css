@@ -13,6 +13,14 @@ ul,li{
 em{
 	font-style: normal;
 }
+#container {
+    height: 120rem;
+    overflow: scroll;
+}
+.lazy{
+	/*display: none;*/
+}
+
 .bodyContext{
 	width: 61.5rem;
 	height: 100%;

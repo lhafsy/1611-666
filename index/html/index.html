@@ -13,7 +13,7 @@
 	</script>
 </head>
 <body>
-	<div class="bodyContext">
+	<div class="bodyContext" id="container">
 		<div class="topFixed">
 			<div class="topPosition">
 				<a href="#!" class="topCity">
@@ -170,7 +170,7 @@
 			<div class="secondHand">推荐房源</div>
 			<a href="#!" class="listType">
 				<div class="listPic">
-					<img src="../img/house1.jpg" alt="">
+					<img alt="" class="lazy" data-original="../img/house1.jpg">
 				</div>
 				<div class="listCont">
 					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
@@ -185,7 +185,7 @@
 			</a>
 			<a href="#!" class="listType">
 				<div class="listPic">
-					<img src="../img/house2.jpg" alt="">
+					<img alt="" class="lazy" data-original="../img/house2.jpg">
 				</div>
 				<div class="listCont">
 					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
@@ -200,7 +200,22 @@
 			</a>
 			<a href="#!" class="listType">
 				<div class="listPic">
-					<img src="../img/house2.jpg" alt="">
+					<img alt="" class="lazy" data-original="../img/house1.jpg">
+				</div>
+				<div class="listCont">
+					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
+					<span class="houseMm">3室2厅/89m²/南/金碧</span><br>
+					<span class="housePrice"><em>425万</em>52302元/平方</span>
+					<ul class="houseTips">
+						<li>近地铁</li>
+						<li>随时看房</li>
+						<li>有电梯</li>
+					</ul>
+				</div>
+			</a>
+			<a href="#!" class="listType">
+				<div class="listPic">
+					<img alt="" class="lazy" data-original="../img/house2.jpg">
 				</div>
 				<div class="listCont">
 					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
@@ -227,5 +242,7 @@
 		    </div>
 		  </div>
 	</div>
+	<script src="../js/lazyIndex.js"></script>
+	<script type="text/javascript" src="../js/jquery.lazyload.js"></script>
 </body>
 </html>
