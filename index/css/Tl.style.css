@@ -1,0 +1,29 @@
+.Tl_fdj{background: url(../img/search.png);width: 2rem;height: 2rem;}
+.Tl_search_box{width: 100%;height: 3.125rem;padding:.625rem;background: #f9f9f9;box-sizing: border-box;position: relative;}
+.input{padding:0 .5rem;padding-left: 1.6125rem;height: 1.875rem;width: 100%;background: #e8e8e9;font-size: .75rem;margin-right: .125rem;border:0;box-sizing: border-box;}
+.fa-search-minus{position: absolute;left: .9375rem;top: 1rem;color: #ccc;}
+.house_lists{padding:0 0 0 1.25rem;}
+.Tl_mod_box{margin-top: .75rem;background-color: #fff;border-top: 1px solid #e5e5e5;/*border-bottom: 1px solid #e5e5e5;*/}
+.Tl_tab_bar{margin-left: -1.25rem;border-bottom: 1px solid #ccc;height: 2.75rem;line-height: 2.75rem;background: #fff;}
+.flexbox{display: flex;}
+.Tl_tab_tit{text-align: center;font-size: .875rem;font-weight: 600;overflow: hidden;display: inline-block;float: left;width: 25%;}
+.box_col{display: block;flex: 1;}
+.Tl_mod_box .Tl_tab_tit>.tit{max-width: 70%;text-overflow: ellipsis;white-space: nowrap;font-weight: 100;display: inline-block;overflow: hidden;vertical-align: middle;}
+.fa-caret-down{margin-left: -.3rem;color: gray;vertical-align: middle;}
+.Tl_sort_bar{position: fixed;right: .9375rem;width: 4rem;height: 1.8125rem;line-height: 1.8125rem;background: rgba(0,0,0,.6);color: #fff;font-size: .875rem;text-align: center;border-radius: .9375rem;z-index: 10;}
+.Tl_mod_cont{padding:0;line-height: 2;}
+.pictext{overflow: hidden;padding:1.25rem 1.25rem 1.25rem 0;border-bottom: 1px solid #e5e5e5;position: relative;}
+.pictext .a_mask{position: absolute;z-index: 1;bottom: 0;top:0;left: 0;right: 0;}
+.flexbox{display: flex;}
+.mod_media,.media_main{width: 6.75rem;position: relative;height: 5.0625rem;text-align: center;}
+.mod_media .media_main img{width: 100%;height: 100%;display: block;vertical-align: top;max-width: 100%;}
+.pictext .item_list{display: block;flex: 1;padding-left: 1.25rem;overflow: hidden;}
+.pictext .item_main{margin-bottom: .45rem;line-height: 1.2em;overflow: hidden;font-size: 1rem;color: #394043;}
+.pictext .item_other{margin-bottom: .45rem;line-height: 1.2em;font-size: .75rem;color: #8b8b8b;}
+.pictext .item_minor{display: flex;margin-bottom: .45rem;line-height: 1.2em;color: #333;font-size: .75rem;}
+.pictext .item_minor .price_total{color: #fa5741;font-size: .9375rem;font-weight: 600;white-space: normal;vertical-align: middle;margin-right: .3125rem;}
+.pictext .item_minor .price_total .unit{font-size: .8125rem;margin-left: -.4rem;}
+.pictext .item_list>div:last-child{margin-bottom: 0;}
+.house_lists .tag_box{line-height: .9375rem;margin-top: -.135rem;height: 1rem;}
+.house_lists .tag_box>.tag{margin:0 .3125rem 0 0;line-height: 1em;vertical-align: top;}
+.tag{display: inline-block;padding:.125rem .25rem;font-size: .6875rem;border-radius: .125rem;}
