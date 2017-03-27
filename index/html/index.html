@@ -9,8 +9,7 @@
 	<script src="../js/jquery-2.1.1.min.js"></script>
 	<script src="../js/changImgTouches.js"></script>
 	<script src="../js/index.js"></script>
-	<script>
-	</script>
+	<script src="angular.min.js"></script>
 </head>
 <body>
 	<div class="bodyContext" id="container">
@@ -166,14 +165,14 @@
 				<span class="seeNums"><em>10162</em>次</span>
 			</a>
 		</div>
-		<div class="houseList">
+		<div class="houseList" id="houseList" ng-app="myapp" ng-controller='mycontroller'>
 			<div class="secondHand">推荐房源</div>
 			<a href="#!" class="listType">
 				<div class="listPic">
 					<img alt="" class="lazy" data-original="../img/house1.jpg">
 				</div>
 				<div class="listCont">
-					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
+					<h3 class="houseTitle" ng-bind="houseTitle1"></h3><br>
 					<span class="houseMm">3室2厅/89m²/南/金碧</span><br>
 					<span class="housePrice"><em>425万</em>52302元/平方</span>
 					<ul class="houseTips">
@@ -188,7 +187,7 @@
 					<img alt="" class="lazy" data-original="../img/house2.jpg">
 				</div>
 				<div class="listCont">
-					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
+					<h3 class="houseTitle" ng-bind="houseTitle2"></h3><br>
 					<span class="houseMm">3室2厅/89m²/南/金碧</span><br>
 					<span class="housePrice"><em>425万</em>52302元/平方</span>
 					<ul class="houseTips">
@@ -203,7 +202,7 @@
 					<img alt="" class="lazy" data-original="../img/house1.jpg">
 				</div>
 				<div class="listCont">
-					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
+					<h3 class="houseTitle" ng-bind="houseTitle3"></h3><br>
 					<span class="houseMm">3室2厅/89m²/南/金碧</span><br>
 					<span class="housePrice"><em>425万</em>52302元/平方</span>
 					<ul class="houseTips">
@@ -218,7 +217,7 @@
 					<img alt="" class="lazy" data-original="../img/house2.jpg">
 				</div>
 				<div class="listCont">
-					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
+					<h3 class="houseTitle" ng-bind="houseTitle4"></h3><br>
 					<span class="houseMm">3室2厅/89m²/南/金碧</span><br>
 					<span class="housePrice"><em>425万</em>52302元/平方</span>
 					<ul class="houseTips">
@@ -242,7 +241,48 @@
 		    </div>
 		  </div>
 	</div>
+	<div id="date" ng-app="myapp" ng-controller='mycontroller' style="font-size:30px width:200px text-align:center">
+		<!-- <div id="aaa">666</div> -->
+	</div>
+	<script>
+	    var myApp = angular.module('myapp',[]);
+	    var date = document.getElementById("date");
+	    var aaa = document.getElementById("aaa");
+	    var houseTitle = document.getElementById("houseList");
+	    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
+	      $http({
+	        url:'http://localhost:88/'+'index',
+	        method:'get'
+	      }).success(function(data){
+	      	$scope.houseTitle1 = data[0].homeMessage;
+	      	$scope.houseTitle2 = data[0].homeMessage;
+	      	$scope.houseTitle3 = data[0].homeMessage;
+	      	$scope.houseTitle4 = data[0].homeMessage;
+	        console.log(data)
+	          console.log(data[1].homeSizes);
+	           console.log(data[0].homeImg);
+	           date.firstChild.innerHTML = data[1].homeSizes;
+	           aaa.innerHTML = data[1].homeSizes;
+	           houseTitle.innerHTML = data[1].homeSizes;
+	           console.log(typeof data)
+	           // $(".houseTitle").html("data[1].homeSizes");
+	      })
+	    }])
+  	</script>
 	<script src="../js/lazyIndex.js"></script>
+	<script>
+		var arr = [1,[2,[3,4],3],6];
+		var arr1 = [];
+		for(var i = 0; i < arr.length; i++){
+			console.log(typeof(arr[i]))
+			if(typeof(arr[i]) == "number"){
+				arr1.push(arr[i])
+			}else{
+				arr[i];
+			}
+		}
+		console.log(arr1)
+	</script>
 	<script type="text/javascript" src="../js/jquery.lazyload.js"></script>
 </body>
 </html>

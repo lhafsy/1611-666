@@ -18,11 +18,28 @@ var scrollImg = $.mggScrollImg('.imgbox ul',{
             // console.log(ind)
             var page = document.getElementById("page");
 			var pageNum = page.innerHTML;
-			console.log(pageNum)
+			// console.log(pageNum)
 			$('.changB').css("background", "#ccc");
 			$('#changB'+pageNum).css("background", "green");
         }
     });
 })()
+
+// 数据加载
+    var myApp = angular.module('myapp',[]);
+    var date = document.getElementById("date");
+    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
+      $http({
+        url:'http://localhost:88/'+'index',
+        method:'get'
+      }).success(function(data){
+        console.log(data)
+          console.log(data[1].homeSizes);
+           console.log(data[0].homeImg);
+           date.innerHTML = data[1].homeSizes;
+           console.log(typeof data)
+           $(".houseTitle").html("data[1].homeSizes");
+      })
+    }])
 	// })
 })

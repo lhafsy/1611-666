@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <script src="angular.min.js"></script>
+
+  <!-- <script src="comment.js"></script> -->
+</head>
+<body>
+
+
+  <div id="mask"  ng-app="myapp" ng-controller='mycontroller'>
+
+    <div id="lhBox">
+      <h1>咨询经纪人</h1>
+      <p id="gb">关闭</p>
+
+      <ul>
+        <li >
+          <div class="lhContent">
+            <a href="#" class="lhPicture">
+              <img src="https://image1.ljcdn.com/usercenter/images/uc_ehr_avatar/52ba8316-eb96-4f0e-814a-f3064ead1a4c.jpg.150x200.jpg">
+            </a>
+            <div class="lhContent1">
+              <p class="lhContent2">潘远东</p>
+              <p class="lhContent3">本房带看 6次</p>
+              <p class="lhContent3">评分: 5 <span>（42人评价）</span></p>
+            </div>
+            <div class="lhContent4">
+              <a href="#">
+                <i class="lhPicture1"></i>
+              </a>
+              <a href="#" >
+                <i class="lhPicture2"></i>
+              </a>
+            </div>
+            <div class="lhInformation">本房信息由我更新维护，有变化最快得知</div>
+          </div>
+
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+
+  <script>
+
+    var myApp = angular.module('myapp',[]);
+    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
+      $http({
+        url:'http://localhost:88/'+'BombBox',
+        method:'get'
+      }).success(function(data){
+        console.log(data)
+          console.log(data[1].homeSizes);
+           console.log(data[0].homeImg);
+      })
+    }])
+
+
+  </script>
+
+</body>
+</html>
