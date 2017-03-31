@@ -9,22 +9,22 @@ myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
         if(name == '' ||  psw == '' ){
 				alert("用户名或密码不能为空！");
 		}else{
-			console.log(222)
+			
         
-	    	// $http({
-		    //     url:'http://localhost:88/'+'html/register',
-		    //     data:{name:$scope.name,password:$scope.psw},
-		    //     method:'post'
-		    //   }).success(function(data){
-		    //   	if(  data.length > 0){
+	    	$http({
+		        url:'http://localhost:88/'+'html/register',
+		        data:{name:$scope.name,password:$scope.psw},
+		        method:'post'
+		      }).success(function(data){
+		      	if(  data.length > 0){
 
-			   //      alert(data);
-		    //   	}else{
-		    //   		alert("注册成功");
-			   //      location.href = "login.html";
-		    //   	}
+			        alert(data);
+		      	}else{
+		      		alert("注册成功");
+			        location.href = "login.html";
+		      	}
 		       
-		    //  })
+		     })
 	    }  
 	}
  
