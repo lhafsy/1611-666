@@ -1,0 +1,213 @@
+*{margin: 0;padding: 0}
+body{font-size:50px}
+ul li{list-style: none;}
+
+.lbw-firstMoudle{width: 100%;}
+.lbw-slider{height:480px;width: 100%;overflow: hidden;}
+.lbw-firstUl img{width:100%;height: 480px;display: block;}
+
+.imgbox{width:61.5rem;height:110%;overflow:hidden;margin:0 auto;}
+.imgbox ul{clear:both;width:184.5rem;height: 110%;overflow:hidden;}
+.imgbox ul li{float:left;width:61.5rem;height:110%;text-align:center;}
+.imgbox ul li img{width:61.5rem;height:110%;}
+.lbw-title{height: 220px;font-size: 3.9rem}
+.lbw-title h3{display: block;margin-top: 30px;
+	          padding: 0 20px 20px 20px;border-bottom: 1px solid #ccc;}
+
+.lbw-price{height: 141px;font-size: 3rem;border-bottom: 1px solid #e5e5e5} 
+.lbw-priceinfo{float: left;width: 30%;margin-left: 30px;border-right: 1px solid #e5e5e5}
+.lbw-priceinfo:last-child{border-right: none;} 
+
+.lbw-info{font-size: 2rem}  
+.lbw-value{font-size: 4rem;color: red;} 
+
+.lbw-advan{height: 100px;font-size: 2rem;} 
+.lbw-advan span{margin-left: 40px;line-height: 100px}
+.lbw-advan2{background: #e0f5ed;color:#73d2ab;}
+.lbw-advan3{background: #e4f6fc;color:#4cc1ec;}
+
+.lbw-particular{height: 900px;}
+.lbw-secondUl{height: 900px;}
+.lbw-secondUl li{float: left; height: 80px;margin-left: 20px;margin-top: 20px;font-size:2.6rem}
+
+.lbw-shortLi{width: 43%;float: left;}
+.lbw-longLi{width: 95%;float: left;}
+.lbw-longLi:last-child{color: gray;}
+
+.lbw-more{margin: 2rem auto;height: 100px;line-height: 100px;text-align: center;width: 90%;background-color: #eee;}
+.lbw-more a{text-decoration: none;color: gray;line-height: 100px;}
+
+/*.lbw-secondMoudle{height: 900px;}*/
+.lbw-homeTitle{width: 90%;margin-left: 40px;margin-top: 20px;border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;font-size: 2.8rem;line-height: 120px;font-weight: bold;}
+.lbw-homeItem{width: 90%;margin-left: 40px;margin-top: 20px;border-bottom: 1px solid #e5e5e5;padding-bottom: 40px;font-size: 2.8rem;}
+.lbw-itemTitle{color:gray;}
+.lbw-description{width: 90%;margin-left: 40px;margin-top: 40px;margin-bottom: 20px;font-size: 2.8rem;}
+.lbw-moreAdvan{margin: 2rem auto;width: 90%;margin-left: 40px;text-align: center;background: #eee;height: 100px;line-height: 100px;color:gray;}
+
+/*.lbw-thirdMoudle{height: 860px;}*/
+.lbw-assess{width: 90%;margin-left: 40px;margin-top: 20px;border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;font-size: 2.8rem;line-height: 120px;font-weight: bold;}
+.lbw-assessInfo{width: 90%;margin-left: 40px;height: 600px;overflow: hidden;font-size: 2.8rem;}
+.lbw-moreAssess{margin: 2rem auto;width: 90%;margin-left: 40px;text-align: center;background: #eee;height: 100px;line-height: 100px;color:gray;}
+
+/*.lbw-fourthMoudle{height: 440px;}*/
+.lbw-newlyRecode{width: 90%;margin-left: 40px;height: 120px}
+.lbw-newlyRecode h3{display: block;float: left; font-size: 3rem;line-height: 100px}
+.lbw-newlyRecode span{display: block;float: right;font-size: 2.2rem;line-height: 100px;color: gray;}
+.lbw-latelyRecode{width: 90%;height:200px; margin-left: 40px;}
+.lbw-weekRecode{float: left;border-right: 1px solid gray;padding-right: 30px;text-align: center;padding-left: 30px;}
+.lbw-weekRecode:last-child{border-right: none;}
+.lbw-weekRecode > dl > dt{color: orange;font-size: 5rem;font-weight: bold;}
+.lbw-moreRecode{margin: 2rem auto;width: 90%;margin-left: 40px;height: 100px;line-height: 100px;background-color:#e5e5e5;color: gray;text-align: center;}
+
+.lbw-fifthMoudle{height: 340px;}
+.lbw-homeHot{idth: 90%;margin-left: 40px;height: 120px}
+.lbw-homeHot h3{display: block;float: left; font-size: 3rem;line-height: 100px}
+.lbw-homeHot span{display: block;float: right;font-size: 2.2rem;line-height: 100px;color: gray;margin-right: 60px;}
+.lbw-hotInfo{width:25%;float: left;border-right: 1px solid gray;padding-right: 30px;text-align: center;padding-left: 30px;}
+.lbw-hotInfo:last-child{border-right: none;}
+.lbw-hotInfo > dl > dt{color: red;font-size: 5rem;font-weight: bold;}
+
+.lbw-sixthMoudle{padding: 0;}
+.lbw-sixthTitle{ width: 90%;margin-left: 40px;margin-top: 20px;margin-bottom: 20px;font-size: 2.8rem;line-height: 120px;font-weight: bold;}
+.lbw-sixthMoudle img{width: 100%}
+
+/*.lbw-seventhMoudle{height: 720px;}*/
+.lbw-seventhTitle h3{width: 90%;margin-left: 40px;margin-top: 20px;border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;font-size: 2.8rem;line-height: 120px;font-weight: bold;}
+.listType{
+	width: 100%;
+	display: inline-block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3rem;
+}
+.listPic{
+	width: 30%;
+	height: 100%;
+	margin: 3rem;
+	float: left;
+}
+.listPic img{
+    width: 100%;
+    margin-top: 3rem;
+}
+.listCont{
+	width: 53%;
+	height: 100%;
+	margin: 3rem 3.5rem 0 0 ;
+    float: right;
+}
+.houseTitle{
+    font-size: 2.8rem;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+}
+.houseMm{
+    font-size: 2.3rem;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.housePrice{
+    font-size: 2.3rem;
+    color: #333;
+}
+.housePrice em{
+    font-size: 3rem;
+    color:  #ff7326;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+.houseTips li{
+    float: left;
+    height: 3rem;
+    padding: 0 1rem;
+    margin: 1rem 1rem 0 0;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    background: green;
+    color: #fff;
+}
+
+/*list Top Css*/
+.topFixed{
+    width: 61.5rem;
+    height: 7rem;
+    margin: 0 auto;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.topPosition{
+    width: 70%;
+    height: 7rem;
+    float: left;
+    padding: 2rem 0 0 3rem;
+}
+.topCityl{
+    width: 18%;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    padding: 0 1.7rem;
+    display: inline-block;
+    opacity: 0.8;
+    background: #666;
+    font-size: 2.5rem;
+    color: #fff;
+    border-radius: 2rem;
+    position: relative;
+}
+/*.topFo{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-block;
+    background-image: url("../img/spritemin_index.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 0.8rem -5.6rem;
+}*/
+/*.user1{
+    width: 10%;
+    height: 7rem;
+    position: relative;
+    padding-top: 1rem;
+    display: inline-block;
+}
+.myUser1{
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+    color: #fff;
+    display: inline-block;
+}
+.topImg{
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    background-image: url("../img/spritemin_index.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.user1:nth-child(3) .topImg{
+    background-position: 0.8rem -36rem;
+}
+.user1:nth-child(2) .topImg{
+    background-position: 0 -31.125rem;
+}
+*/
+
+.lbw-moreSource{margin: 2rem auto;width: 90%;margin-left: 40px;height: 100px;line-height: 100px;background-color:#e5e5e5;color: gray;text-align: center;}
+
+/*.lbw-eighthMoudle{height: 600px;}*/
+.lbw-eighthTitle h3{width: 100%; text-align: center; margin-top: 20px;margin-bottom: 20px;font-size: 2.8rem;line-height: 120px;font-weight: bold;}
+.lbw-eighthContain{height: 200px}
+.lbw-eighthContain1{width:30%;margin-left:30px;float: left;}
+.lbw-eighthNumber{font-size: 3rem;font-weight: bold;}
+.lbw-eighthExplain{font-size: 2.5rem;color: gray}
+.lbw-eighthSale {margin: 2rem auto;width: 88%;margin-left: 5%;border:1px solid gray;height: 100px;text-align: center;}
+.lbw-eighthSale a{text-decoration:none;text-align: center;line-height: 100px;color: black;}

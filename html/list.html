@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>房子详情</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/overallSituation.css">
+<link rel="stylesheet" type="text/css" href="../css/list.css">
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/overallSituation1.css">
+
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=6130864c2952d60fc2d5e63d7b3aace2"></script>
+<script type="text/javascript" src="../lib/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript" src="../js/changImgTouches.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../lib/angular.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!-- <script type="text/javascript" src="../js/list.js"></script> -->
+
+<style>
+.runtoTop {
+bottom: 1rem
+}
+  .lhContent3{
+    line-height:1.5625rem
+  }
+  #lha{text-align: center;
+    border-color: #00ae66;
+    background: #00ae66;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    width: 100% ;
+    display: block;
+    height:9.375rem;
+    color: #fff;
+    font-size: 1rem;
+    z-index: 2
+  }
+  #fsy{
+    line-height:9.375rem;
+    font-size:5.0rem;
+    font-weight: 700;
+  }
+</style>
+
+
+<body ng-app="myapp" ng-controller='mycontroller'>
+
+<div id="mask"  >
+    <div id="lhBox">
+      <h1>咨询经纪人</h1>
+      <p id="gb">关闭</p>
+
+      <ul>
+        <li ng-repeat=" x in loop">
+          <div class="lhContent">
+            <a href="#" class="lhPicture">
+              <img ng-src={{x.a}}>
+           </a>
+           <div class="lhContent1">
+            <p class="lhContent2" ng-bind="x.name"></p>
+            <p class="lhContent3"  ng-bind="x.cishu"></p>
+            <p class="lhContent3" ng-bind="x.score"></p>
+            <p class="lhContent3" ng-bind="x.pj"></p>
+          </div>
+          <div class="lhContent4">
+            <a href="#">
+              <i class="lhPicture1"></i>
+            </a>
+            <a href="#" >
+              <i class="lhPicture2"></i>
+            </a>
+               <a href="#" >
+              <i class="lhPicture3"></i>
+            </a>
+          </div>
+          <div class="lhInformation">本房信息由我更新维护，有变化最快得知</div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+
+  <div id="lha">
+    <span id="fsy">推荐经纪人</span>
+  </div>
+  <div id="runTopa"></div>
+  <div class="topFixed">
+    <div class="topPosition">
+      <a href="http://localhost:88/index/index.html" class="topCityl" id="City">
+        <span>
+          <em class="topLoad">爱家网</em>
+          <!-- <i class="topFo"></i> -->
+        </span>
+      </a>
+    </div>
+    <a href="#!" class="user1" >
+      <i class="topImg"></i>
+      <span class="myUser1">我的</span>
+    </a>
+    <a href="#!" class="user1">
+      <i class="topImg"></i>
+      <span class="myUser1">APP</span>
+    </a>
+  </div>
+  <div class="lbw-firstMoudle">
+    <div class="lbw-slider">
+      <div class="imgbox imgboxa">
+        <ul>
+          <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/1.jpg"></img></a></li>
+          <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/2.jpg"></img></a></li>
+          <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/4.jpg"></img></a></li>
+        </ul>
+        <span id="page"></span>
+      </div>
+    </div>
+    <div class="ics"></div>
+    <div class="lbw-more"><a href="#">更多房源信息</a></div>
+  </div>
+  <div class="lbw-white" style="background: #eee;height: 40px;"></div>
+  <div class="lbw-secondMoudle">
+   <div class="lbw-homeTitle">房源特色</div>
+   <div class="lbw-homeItem">
+    <dl>
+      <dt class="lbw-itemTitle">周边配套</dt>
+      <dd class="lbw-itemContain">商场：百佳超市、苏宁电器商场、电器城医院：石溪医院、珠江医院、中山二院南院邮局：鸣翠邮局、南石头邮局银行：中国银行、建设银行、农业银行 金溪菜市场等超棒的周边设套完善</dd>
+    </dl>
+  </div>
+  <div class="lbw-description">
+    <dl>
+      <dt class="lbw-itemTitle">装修描述</dt>
+      <dd class="lbw-itemContain">实用三房 户型方正 北向通风采光棒 家私电齐 装修保养新净 即拎包入住</dd>
+    </dl>
+  </div>
+  <div class="lbw-moreAdvan">更多特色</div>
+</div>
+<div class="lbw-white" style="background: #eee;height: 40px;"></div>
+<div class="lbw-thirdMoudle">
+ <div class="lbw-assess">经纪人房评</div>
+ <div class="lbw-assessInfo">周边配套：商场：百佳超市、苏宁电器商场、电器城医院：石溪医院、珠江医院、中山二院南院邮局：鸣翠邮局、南石头邮局银行：中国银行、建设银行、农业银行 金溪菜市场等超棒的周边设套完善
+  装修描述：实用三房 户型方正 北向通风采光棒 家私电齐 装修保养新净 即拎包入住
+  房源标题：金碧二期 格局方正 厅直出阳台 采光通透
+  户型介绍：布局合理。采光以及通风都很好。旺中带静。视野开阔。靓景美不胜收。让您感觉舒服。让您心情舒畅。
+  小区介绍：属于中型社区，环境优美 ，出入方便 配套成熟。优良地段，交通方便，有多条线路直达广州任何一个区域
+  学区介绍：途经线路：9、13、59、75、79、79A、86、87、180、202、221、230、288、288A、309、309A、546、551、836、夜7、夜20和夜24
+  核心卖点：装修保养新净 厅直出阳台</div>
+  <div class="lbw-moreAssess">更多房评</div>
+</div>
+<div class="lbw-white" style="background: #eee;height: 40px;"></div>
+<div class="lbw-fourthMoudle">
+ <div class="lbw-newlyRecode">
+   <h3>带看记录</h3>
+   <span>最近带看：2017.03.24</span>
+ </div>
+ <div class="lbw-latelyRecode">
+   <div class="lbw-weekRecode">
+    <dl>
+      <dt>7</dt>
+      <dd>近7日带看（次）</dd>
+    </dl>
+  </div>
+  <div class="lbw-weekRecode">
+    <dl>
+      <dt>44</dt>
+      <dd>累计带看（次）</dd>
+    </dl>
+  </div>
+</div>
+<div class="lbw-moreRecode">
+  查看更多记录
+</div>
+</div>
+<div class="lbw-white" style="background: #eee;height: 40px;"></div>
+<div class="lbw-fifthMoudle">
+  <div class="lbw-homeHot">
+   <h3>房源热度</h3>
+   <span>2017.03.15挂牌</span>
+ </div>
+ <div>
+  <div class="lbw-hotInfo">
+    <dl>
+      <dt>5</dt>
+      <dd>关注(人)</dd>
+    </dl>
+  </div>
+  <div class="lbw-hotInfo">
+    <dl>
+      <dt>984</dt>
+      <dd>浏览(次)</dd>
+    </dl>
+  </div>
+  <div class="lbw-hotInfo">
+    <dl>
+      <dt>44</dt>
+      <dd>看过(人)</dd>
+    </dl>
+  </div>
+</div>
+</div>
+<div class="lbw-white" style="background: #eee;height: 40px;"></div>
+<div class="lbw-sixthMoudle">
+  <div class="lbw-sixthTitle">你的位置及周边：广州</div>
+  <!-- 定位地图 -->
+  <div id="container"></div>
+</div>
+<div class="lbw-white" style="background: #eee;height: 40px;width: 100%"></div>
+<div class="lbw-seventhMoudle">
+  <div class="lbw-seventhTitle"><h3>推荐房源</h3></div>
+  <a href="#!" class="listType">
+    <div class="listPic">
+      <img src="../img/4.jpg" alt="">
+    </div>
+    <div class="listCont">
+      <h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
+      <span class="houseMm">3室2厅/89m²/南/金碧</span><br>
+      <span class="housePrice"><em>425万</em>52302元/平方</span>
+      <ul class="houseTips">
+        <li>近地铁</li>
+        <li>随时看房</li>
+        <li>有电梯</li>
+      </ul>
+    </div>
+  </a>
+  <div class="lbw-moreSource">更多相似房源</div>
+</div>
+<div class="lbw-white" style="background: #eee;height: 40px;"></div>
+<div class="lbw-eighthMoudle">
+  <div class="lbw-eighthTitle"><h3>我有房子要卖</h3></div>
+  <div class="lbw-eighthContain">
+    <div class="lbw-eighthContain1">
+      <dl>
+        <dt class="lbw-eighthNumber">8000+</dt>
+        <dd class="lbw-eighthExplain">全国链家门店</dd>
+      </dl>
+    </div>
+    <div class="lbw-eighthContain1">
+      <dl>
+        <dt class="lbw-eighthNumber">10万+</dt>
+        <dd class="lbw-eighthExplain">全国经纪人</dd>
+      </dl>
+    </div>
+    <div class="lbw-eighthContain1">
+      <dl>
+        <dt class="lbw-eighthNumber">15年+</dt>
+        <dd class="lbw-eighthExplain">链家倾情服务</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="lbw-eighthSale"><a href="#">去卖房</a></div>
+</div>
+<!-- 锚链接 -->
+<a href="#runTopa" class="runtoTop" id="runTop">
+  <img src="../img/runTop.png" alt="">
+</a>
+
+
+
+
+
+    <script>
+    // window.onload = function(){
+    //   var runTotop = document.getElementById("runTotop");
+    //   var scrollt = document.documentElement.scrollTop + document.body.scrollTop;
+    //   console.log(document.body.clientHeight)
+    // }
+    // location.search
+$('#lha').on('click',function(){
+  $('#mask').css('display','block')
+})
+
+$('#gb').on('click',function(){
+   $('#mask').css('display','none')
+})
+
+
+
+
+    // 获取当前位置地图
+    var map = new AMap.Map('container', {
+     resizeEnable: true
+   });
+
+    $(function(){
+      $('#btnIP').on('touchstart', function(){
+        //http://lbs.amap.com/api/javascript-api/reference/location#m_AMap.CitySearch
+        map.plugin(['AMap.CitySearch'], function(){
+          var ipSearch = new AMap.CitySearch();
+          //发起一个请求
+          ipSearch.getLocalCity(function(status, result){
+            map.setBounds(result.bounds);
+          })
+        })
+
+      });
+
+      $('#btnGPS').on('touchstart', function(){
+        var options = {
+          enableHighAccuracy: true,
+          maximumAge: 3600000
+        }
+        var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+
+        function onSuccess(position) {
+
+          alert('Latitude: '          + position.coords.latitude          + '\n' +
+           'Longitude: '         + position.coords.longitude         + '\n' +
+           'Altitude: '          + position.coords.altitude          + '\n' +
+           'Accuracy: '          + position.coords.accuracy          + '\n' +
+           'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+           'Heading: '           + position.coords.heading           + '\n' +
+           'Speed: '             + position.coords.speed             + '\n' +
+           'Timestamp: '         + position.timestamp                + '\n');
+
+          AMap.service('AMap.Geocoder',function(){//回调函数
+              //实例化Geocoder
+              geocoder = new AMap.Geocoder({
+                  city: "020"//城市，默认：“全国”
+                });
+              //TODO: 使用geocoder 对象完成相关功能
+            //逆地理编码
+            var lnglatXY=[position.coords.longitude, position.coords.latitude];//地图上所标点的坐标
+            geocoder.getAddress(lnglatXY, function(status, result) {
+              // console.log(status, result.bounds)
+              if (status === 'complete' && result.info === 'OK') {
+                map = new AMap.Map('container', {
+                 resizeEnable: true,
+                 zoom:16,
+                 center: lnglatXY
+               });
+                  // AMap.event.addListener(geolocation , 'complete', geolocationResult); //定位成功后的回调函数
+                   //获得了有效的地址信息:
+                   //即，result.regeocode.formattedAddress
+                 }else{
+                   //获取地址失败
+                 }
+               });
+          })
+        };
+
+        function onError(error) {
+          alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
+        }
+      })
+    })
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户信息</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="../css/userInfo.css">
+    <script src="../lib/jquery-2.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+<body>
+<div class="top">
+    <div class="top_header clear">
+      
+        <div class="topLeft">
+        	<a href="http://localhost:88/index/index.html" class="logo_wrap"><span class="logo"></span></a>
+        	<a href="../html/City.html" class="City_wrap"><span class="City"><em>广州</em><i class="icon_pull"></i></span></a>
+        </div>  
+    	<div class="topRight">
+         <a href="#" class="my"><i class="icon_user"></i><span class="text">我的</span></a>
+         <a href="javascript:;"  class="app"><i class="icon_download"></i><span class="text">APP</span></a>
+
+        </div>
+    </div>
+    <div class="top_banner">
+    	<div class="userIMG">
+          <img src="../img/mine_head_bg.png" alt="">   
+        </div>
+    	<div class="user_btn">
+            <a href="login.html" >登录</a>
+    		<a href="register.html" >注册</a>
+    	</div>
+    </div>
+	
+</div>
+<div class="main">
+    <div class="mainList">
+        <ul class="HQlist">
+                <li>
+                    <a href="#">我关注的房源</a><span class="list_item"></span><span class="right_arrow"></span>
+                </li>
+                <li>
+                    <a href="#">我关注的小区</a><span class="list_item community"></span><span class="right_arrow"></span>
+                </li>
+                <li>
+                    <a href="#">我关注的新房</a><span class="list_item house"></span><span class="right_arrow"></span>
+                </li>
+                <li>
+                    <a href="#">我的看房记录</a><span class="list_item record"></span><span class="right_arrow"></span>
+                </li>
+                <li>
+                    <a href="#">免电话营销</a><span class="list_item shiled"></span><span class="right_arrow"></span>
+                </li>
+
+        </ul>
+
+        
+    </div>
+	
+</div>
+<div class="removeLogin">
+    <a href="#!" id="removeLogin">退出</a>
+</div>
+</body>
+</html>
+<script>   
+$(function(){
+    var str = location.search.slice(1);
+    var arr = str.split("=");
+
+    console.log( arr[1]);
+    var id= arr[1];
+    var username = getCookie('username');
+
+    if(id){
+        
+        $('.top_banner').append('<div class="userID">欢迎你：'+id +'</div>' );
+        $('.user_btn').remove();
+    }else if(username){
+        $('.top_banner').append('<div class="userID">欢迎你：'+getCookie('username') +'</div>' );
+        $('.user_btn').remove();
+    }  
+
+    $("#removeLogin").click(function(){
+        removeCookie('username');
+        location.href = "http://localhost:88/html/userInfo.html";
+    })
+
+
+})
+</script>

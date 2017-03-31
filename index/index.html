@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主页</title>
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/overallSituationIndex.css">
+	<link rel="stylesheet" href="../css/common.css">
+
+	<script src="../lib/jquery-2.1.1.min.js"></script>
+	<script src="../js/index.js"></script>
+	<script src="../lib/angular.min.js"></script>
+	<script src="../js/changImgTouches.js"></script>
+	<script src="../js/City.js"></script>
+	<script src="../js/common.js"></script>
+</head>
+<body>
+	<!-- 详情页 http://localhost:88/html/list.html -->
+	<!-- 定位页 http://localhost:88/html/City.html -->
+	<!-- 主页 http://localhost:88/index/index.html -->
+	<!-- 登录页 http://localhost:88/html/login.html -->
+	<!-- 注册页 http://localhost:88/html/register.html -->
+	<!-- 分页 http://localhost:88/html/pages.html -->
+	<!-- 百科页面 http://localhost:88/html/homeKnow.html -->
+	<!-- 登录的用户 http://localhost:88/html/userInfo.html -->
+	<!-- 租房页面 http://localhost:88/html/zufang.html -->
+	<!-- 新房页面 http://localhost:88/html/fang.html -->
+	<!-- 个人主页 http://localhost:88/html/userInfo.html -->
+	<div id="runTopa"></div>
+	<div class="bodyContext" id="container" ng-app="myapp" ng-controller='mycontroller'>
+		<div class="topFixed">
+			<div class="topPosition">
+				<a href="http://localhost:88/html/City.html" class="topCity" id="City">
+					<span>
+						<em class="topLoad">广州</em>
+						<i class="topFo"></i>
+					</span>
+				</a>
+			</div>
+			<a href="http://localhost:88/html/userInfo.html" class="user1">
+				<i class="topImg"></i>
+				<span class="myUser1">我的</span>
+			</a>
+			<a href="#!" class="user1">
+				<i class="topImg"></i>
+				<span class="myUser1">APP</span>
+			</a>
+		</div>
+		<div class="indexTop" id="indexTop">
+			<h1 href="#!" class="banSign">给你一个温暖的家</h1>
+			<div class="bannerContext">
+			<!-- 轮播图架构 -->
+				<div class="imgbox">
+				    <ul>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/head_bg1.jpg"></img></a></li>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/head_bg2.jpg"></img></a></li>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/head_bg3.jpg"></img></a></li>
+				    </ul>
+				</div>
+
+				<span id="page"></span>
+				<div class="searchBox">
+					<i class="icon_search"></i>
+					<input type="text" class="input" disabled=""
+					placeholder="输入小区或商圈开始找房咯~">
+				</div>
+				<ul class="changeBan">
+					<li class="changeBtn">
+						<a href="#!"  id="changB1" class="changB" bg="../img/head_bg1.jpg"></a>
+					</li>
+					<li class="changeBtn">
+						<a href="#!"  id="changB2" class="changB" bg="../img/head_bg2.jpg"></a>
+					</li>
+					<li class="changeBtn">
+						<a href="#!" id="changB3" class="changB" bg="../img/head_bg3.jpg"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="selectType">
+			<div class="eleSelect">
+				<h2 class="titleSelect" title="二手房">
+					<a href="http://localhost:88/html/pages.html" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">二手房</div>
+					</a>
+				</h2>
+				<h2 class="titleSelect" title="新房">
+					<a href="http://localhost:88/html/fang.html" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">新房</div>
+					</a>
+				</h2>
+				<h2 class="titleSelect" title="租房">
+					<a href="http://localhost:88/html/zufang.html" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">租房</div>
+					</a>
+				</h2>
+				<h2 class="titleSelect" title="卖房">
+					<a href="#!" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">卖房</div>
+					</a>
+				</h2>
+				<h2 class="titleSelect" title="房产指南">
+					<a href="#!" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">房产指南</div>
+					</a>
+				</h2>
+				<h2 class="titleSelect" title="海外">
+					<a href="#!" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">海外</div>
+					</a>
+				</h2>
+				<h2 class="titleSelect" title="查成交">
+					<a href="#!" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">查成交</div>
+					</a>
+				</h2>
+				<h2 class="titleSelect" title="找小区">
+					<a href="#!" class="inner post_ulog">
+						<div class="icon_home">
+						</div>
+						<div class="name">找小区</div>
+					</a>
+				</h2>
+			</div>
+		</div>
+		<div class="know"></div>
+		<div class="Tool">
+			<div class="commonTool">常用工具</div>
+			<div class="toolType">
+					<div class="toolSelect">
+						<a href="http://localhost:88/html/homeKnow.html" class="toolSelect">
+							<div class="icon_tool">
+							</div>
+							<div class="toolName">百科</div>
+						</a>
+					</div>
+					<div class="toolSelect">
+						<a href="#!" class="toolSelect">
+							<div class="icon_tool">
+							</div>
+							<div class="toolName">查房价</div>
+						</a>
+					</div>
+					<div class="toolSelect">
+						<a href="#!" class="toolSelect">
+							<div class="icon_tool">
+							</div>
+							<div class="toolName">找经纪人</div>
+						</a>
+					</div>
+					<div class="toolSelect">
+						<a href="#!" class="toolSelect">
+							<div class="icon_tool">
+							</div>
+							<div class="toolName">客服</div>
+						</a>
+					</div>
+			</div>
+		</div>
+		<div class="secondHandHome">
+			<div class="secondHand">二手房市场行情</div>
+			<a href="#!" class="visitHouse">
+				<p>3月23日带看量</p>
+				<span class="seeNums"><em>2317</em>次</span>
+			</a>
+			<a href="#!" class="visitHouse">
+				<p>3月23日带看量</p>
+				<span class="seeNums"><em>10162</em>次</span>
+			</a>
+		</div>
+		<div class="houseList" id="houseList" ng-bind="str">
+			<div class="secondHand">推荐房源</div>
+		</div>
+		<div id="indexFoot">
+		    <a href="#">手机爱家网</a>
+		    <div id="indexFootC">
+		        <i id="indexFootImg1"></i>
+		        <i id="indexFootImg2"></i>
+		        <div id="indexFootBottom ">
+		            <p>北京爱家房地产经纪有限公司</p>
+		            <p>网络经营许可证</p>
+		            <p> 京ICP备11024601号-12</p>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<!-- <script src="../js/lazyIndex.js"></script> -->
+	<!-- <script type="text/javascript" src="../js/jquery.lazyload.js"></script> -->
+	<div class="lbw-foot">
+      <div class="lbw-foot-son"><a href="http://localhost:88/index/index.html"><img src="../../img/house.png"></a></div>
+      <div class="lbw-foot-son"><a href=""><img src="../../img/message.png"></a></div>
+      <div class="lbw-foot-son"><a href="http://localhost:88/html/login.html"><img src="../../img/contacts.png"></a></div>
+    </div>
+	<a href="#runTopa" class="runtoTop1" id="runTop">
+      <img src="../img/runTop.png" alt="">
+    </a>
+    <script>
+
+    </script>
+</body>
+</html>

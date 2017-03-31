@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="../css/overallSituation.css">
+  <link rel="stylesheet" href="../css/homeKnow.css">
+  <script src="../lib/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+  <div id="pagingHead box">
+    <div id="pagingHeadLeft">
+      <a href="http://localhost:88/index/index.html"><p id="pagingHeadLeft1">爱家网</p></a>
+      <span id="pagingHeadLeft2">动态获取</span>
+      <span id="pagingHeadLeft3"><span>暂定</span><i></i></span>
+      <div id="pagingHeadRight">
+        <a href="http://localhost:88/html/login.html" id="pagingHeadRight1"><i></i><span>我的</span></a>
+        <a href="#" id="pagingHeadRight2"><i></i><span>APP</span></a>
+      </div>
+    </div>
+  </div>
+  <form>
+    <input type="text" placeholder="房产知识有疑问？来搜搜吧~" disabled="disabled">
+  </form>
+  <div id="q">
+    <ul id="w"  class="box">
+      <li class="z1">二手房</li>
+      <li class="z2">新房</li>
+      <li class="z3">卖房</li>
+      <li class="z4">换房</li>
+    </ul>
+  </div>
+
+
+  <div id="a">
+    <ul id="b">
+      <li><a>准备买房</a></li>
+      <li><a>看房/定房</a></li>
+      <li><a>签约/定房</a></li>
+      <li><a>全款/贷款</a></li>
+      <li><a>缴税/过户</a></li>
+      <li><a>入住/交接</a></li>
+      <li><a>买房风险</a></li>
+    </ul>
+
+
+    <ul id="c">
+      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+    </ul>
+
+
+  </div>
+
+
+  <div class="lha">
+    <a href="http://localhost:88/index/index.html" class="lha1">
+      <p>返回主页</p>
+    </a>
+    <a href="http://localhost:88/html/login.html" class="lha2">
+      <p>我的</p>
+    </a>
+  </div>
+
+
+  <script>
+    $(document).on('touchstart','#b li',function(){
+      $('#b li').css({'background':' #f5f5f5','font-weight': '400'})
+      $(this).css({'background-color':'#fff','font-weight': '700'})
+    })
+
+
+
+
+    $(document).on('click','.z1',function(){
+     $('.z22').addClass('z2')
+     $('.z22').removeClass('z22');
+     $('.z33').addClass('z3')
+     $('.z33').removeClass('z33');
+     $('.z44').addClass('z4')
+     $('.z44').removeClass('z4');
+
+     $(this).removeClass();
+     $(this).addClass('z11')
+   })
+
+    $(document).on('click','.z2',function(){
+     $('.z11').addClass('z1')
+     $('.z11').removeClass('z11');
+     $('.z44').addClass('z4')
+     $('.z44').removeClass('z44');
+     $('.z33').addClass('z3')
+     $('.z33').removeClass('z33');
+
+     $(this).removeClass();
+     $(this).addClass('z22')
+   })
+
+
+    $(document).on('click','.z3',function(){
+     $('.z11').addClass('z1')
+     $('.z11').removeClass('z11');
+     $('.z44').addClass('z4')
+     $('.z44').removeClass('z44');
+     $('.z22').addClass('z2')
+     $('.z22').removeClass('z22');
+
+     $(this).removeClass();
+     $(this).addClass('z33')
+   })
+
+
+
+    $(document).on('click','.z4',function(){
+     $('.z11').addClass('z1')
+     $('.z11').removeClass('z11');
+     $('.z22').addClass('z2')
+     $('.z22').removeClass('z22');
+     $('.z33').addClass('z3')
+     $('.z33').removeClass('z33');
+
+     $(this).removeClass();
+     $(this).addClass('z44')
+   })
+
+
+
+
+ </script>
+</body>
+</html>

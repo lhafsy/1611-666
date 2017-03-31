@@ -1,0 +1,3 @@
+1创建数据库shijianfeishi 然后创2个表users home
+2执行BombBox.js
+3打开网页

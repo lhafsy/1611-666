@@ -1,0 +1,95 @@
+@charset "utf-8";
+/*reset*/
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;color:#666;}
+img{border:none;}
+table{border-collapse: collapse;}
+textarea{resize: none;overflow: hidden;}
+
+
+/*public*/
+body{font-family: '微软雅黑';color: #666;}
+.wrap{
+	width: 1263px;
+	margin:0 auto;
+}
+.clear{
+	zoom:1;
+}
+.clear:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+
+.moreCity{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left:0;
+	right:0;
+	background: #fafafa;
+
+}
+.moreCity .header a{
+	color:#fff;
+}
+.moreCity .header{
+    display: flex;
+    width: 100%;
+    height: 2.8125rem;
+    line-height: 2.8125rem;
+    padding: 0 .25rem 0 .9375rem;
+    text-align: left;
+    background-color: #39ac6a;
+    color: #fff;
+    box-sizing: border-box;
+    font-weight:normal;
+
+}
+.moreCity .header div{
+	text-align: center;
+	margin:0 auto;
+	
+
+}
+.moreCity .optCity div:nth-child(1){
+	background-color: #eaeaeb;
+    font-weight: 400;
+    font-size: .8125em;
+    color: #626262;
+    padding: .4rem 0 .4rem 1.25rem;
+	
+}
+.moreCity .optCity div:nth-child(2){
+    font-weight: 400;
+    color: #626262;
+    padding: .4rem 0 .4rem 1.25rem;
+	
+
+
+}
+.moreCity{
+	overflow:auto;
+}
+.moreCity .elseCity div:nth-child(1){
+	background-color: #eaeaeb;
+    font-weight: 400;
+    font-size: .8125em;
+    color: #626262;
+    padding: .4rem 0 .4rem 1.25rem;
+	
+}
+
+.moreCity .elseCity .li_item{
+	padding: .4rem 0 .4rem 1.25rem;
+    position: relative;
+    display: flex;
+    line-height: 2.75rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: .9375rem;
+}

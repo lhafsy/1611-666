@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/list.css">
+<script type="text/javascript" src="../libs/jquery/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript" src="../js/changImgTouches.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../../angular.min.js"></script>
+<script type="text/javascript" src="../js/list.js"></script>
+
+<body ng-app="myapp" ng-controller='mycontroller'>
+   <div class="lbw-firstMoudle">
+   	  <div class="lbw-slider">
+   	  <div class="imgbox">
+				    <ul>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/1.jpg"></img></a></li>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/2.jpg"></img></a></li>
+				        <li><a href="#!"><img class="bgTop" id="changeImg" src="../img/3.jpg"></img></a></li>
+				    </ul>
+				</div>
+<!--    	<ul class="lbw-firstUl">
+   	  		<li><img src="../img/1.jpg"></li>
+   	  		<li><img src="../img/2.jpg"></li>
+   	  		<li><img src="../img/3.jpg"></li>
+   	  		<li><img src="../img/1.jpg"></li>
+   	  		<li><img src="../img/2.jpg"></li>
+   	  		<li><img src="../img/3.jpg"></li>
+   	  		<li><img src="../img/1.jpg"></li>
+   	  		<li><img src="../img/2.jpg"></li>
+   	  		<li><img src="../img/3.jpg"></li>
+   	  	  </ul> -->
+   	  </div>
+      <div class="ics"></div>
+ <!--      <div class="lbw-title">
+       <h3 ng-bind="homeFeature">金碧二期 格局方正 厅直出阳台 采光通透</h3>
+      </div>
+      <div class="lbw-price">
+      	<div class="lbw-priceinfo">
+      		<dl>
+      			<dt class="lbw-info">售价</dt>
+      			<dd class="lbw-value" ng-bind="homeBvice"></dd>
+      		</dl>
+      	</div>
+      	<div class="lbw-priceinfo">
+      		<dl>
+      			<dt class="lbw-info">房型</dt>
+      			<dd class="lbw-value">3室2厅</dd>
+      		</dl>
+      	</div>
+      	<div class="lbw-priceinfo">
+      		<dl>
+      			<dt class="lbw-info">建筑面积</dt>
+      			<dd class="lbw-value">89㎡</dd>
+      		</dl>
+      	</div>
+      </div>
+      <div class="lbw-advan">
+      	<span class="lbw-advan3">近地铁</span>
+      	<span class="lbw-advan2">随时看房</span>
+      	<span class="lbw-advan3">有电梯</span>
+      </div>
+      <div class="lbw-particular">
+        <ul class="lbw-secondUl">
+        	<li class="lbw-shortLi">均价：40540/平</li>
+        	<li class="lbw-shortLi">首付：108万</li>
+         	<li class="lbw-shortLi">挂牌：2017.03.15</li>
+            <li class="lbw-shortLi">用途：普通住宅</li>
+        	<li class="lbw-shortLi">楼层：低楼层/28</li>
+         	<li class="lbw-shortLi">朝向：南</li>
+        	<li class="lbw-shortLi">装修：其他</li>
+        	<li class="lbw-shortLi">楼型：塔楼</li>
+        	<li class="lbw-shortLi">年代：2000年</li>
+        	<li class="lbw-shortLi">区域：海珠.金碧</li>
+        	<li class="lbw-longLi">看房时间：提前预约随时可看</li>
+        	<li class="lbw-longLi">链家编号：GZ0002548201</li>
+        	<li class="lbw-longLi">地铁：距离2号线东晓南地铁站1058米</li>
+        	<li class="lbw-longLi">小区：金碧花园第二金碧</li>
+        </ul>
+      </div> -->
+      <div class="lbw-more"><a href="#">更多房源信息</a></div>
+   </div>
+   <div class="lbw-white" style="background: #eee;height: 40px;"></div>
+   <div class="lbw-secondMoudle">
+   	   <div class="lbw-homeTitle">房源特色</div>
+   	   <div class="lbw-homeItem">
+   	   	<dl>
+   	   		<dt class="lbw-itemTitle">周边配套</dt>
+   	   		<dd class="lbw-itemContain">商场：百佳超市、苏宁电器商场、电器城医院：石溪医院、珠江医院、中山二院南院邮局：鸣翠邮局、南石头邮局银行：中国银行、建设银行、农业银行 金溪菜市场等超棒的周边设套完善</dd>
+   	   	</dl>
+   	   </div>
+   	   <div class="lbw-description">
+   	   	  <dl>
+   	   	  	<dt class="lbw-itemTitle">装修描述</dt>
+   	   	  	<dd class="lbw-itemContain">实用三房 户型方正 北向通风采光棒 家私电齐 装修保养新净 即拎包入住</dd>
+   	   	  </dl>
+   	   </div>
+   	   <div class="lbw-moreAdvan">更多特色</div>
+   </div>
+   <div class="lbw-white" style="background: #eee;height: 40px;"></div>
+   <div class="lbw-thirdMoudle">
+   	   <div class="lbw-assess">经纪人房评</div>
+   	   <div class="lbw-assessInfo">周边配套：商场：百佳超市、苏宁电器商场、电器城医院：石溪医院、珠江医院、中山二院南院邮局：鸣翠邮局、南石头邮局银行：中国银行、建设银行、农业银行 金溪菜市场等超棒的周边设套完善
+装修描述：实用三房 户型方正 北向通风采光棒 家私电齐 装修保养新净 即拎包入住
+房源标题：金碧二期 格局方正 厅直出阳台 采光通透
+户型介绍：布局合理。采光以及通风都很好。旺中带静。视野开阔。靓景美不胜收。让您感觉舒服。让您心情舒畅。
+小区介绍：属于中型社区，环境优美 ，出入方便 配套成熟。优良地段，交通方便，有多条线路直达广州任何一个区域
+学区介绍：途经线路：9、13、59、75、79、79A、86、87、180、202、221、230、288、288A、309、309A、546、551、836、夜7、夜20和夜24
+核心卖点：装修保养新净 厅直出阳台</div>
+   	   <div class="lbw-moreAssess">更多房评</div>
+   </div>
+   <div class="lbw-white" style="background: #eee;height: 40px;"></div>
+   <div class="lbw-fourthMoudle">
+   	   <div class="lbw-newlyRecode">
+   	     <h3>带看记录</h3>
+   	     <span>最近带看：2017.03.24</span>
+   	   </div>
+   	   <div class="lbw-latelyRecode">
+   	   	 <div class="lbw-weekRecode">
+   	   	 	<dl>
+   	   	 		<dt>7</dt>
+   	   	 		<dd>近7日带看（次）</dd>
+   	   	 	</dl>
+   	   	 </div>
+   	     <div class="lbw-weekRecode"> 
+   	    	<dl>
+   	   		    <dt>44</dt>
+   	    	    <dd>累计带看（次）</dd>
+   	    	</dl>
+   	     </div>
+   	   </div> 
+   	   <div class="lbw-moreRecode">
+   	      查看更多记录
+   	   </div>
+    </div>
+       <div class="lbw-white" style="background: #eee;height: 40px;"></div>
+       <div class="lbw-fifthMoudle">
+       	  <div class="lbw-homeHot">
+       	     <h3>房源热度</h3>
+             <span>2017.03.15挂牌</span>
+       	  </div>
+       	  <div>
+       	  	<div class="lbw-hotInfo">
+       	  		<dl>
+       	  			<dt>5</dt>
+       	  			<dd>关注(人)</dd>
+       	  		</dl>
+       	  	</div>
+       	  	<div class="lbw-hotInfo">
+       	  		<dl>
+       	  			<dt>984</dt>
+       	  			<dd>浏览(次)</dd>
+       	  		</dl>
+       	  	</div>
+       	  	<div class="lbw-hotInfo">
+       	  		<dl>
+       	  			<dt>44</dt>
+       	  			<dd>看过(人)</dd>
+       	  		</dl>
+       	  	</div>
+       	  </div>
+       </div>
+       <div class="lbw-white" style="background: #eee;height: 40px;"></div>
+       <div class="lbw-sixthMoudle">
+       	  <div class="lbw-sixthTitle">位置及周边：海珠-金碧</div>
+       	  <div><img src="../img/5.jpg"></div>
+       </div>
+        <div class="lbw-white" style="background: #eee;height: 80px;"></div>
+       <div class="lbw-seventhMoudle">
+        <div class="lbw-seventhTitle"><h3>推荐房源</h3></div>
+       	<a href="#!" class="listType">
+				<div class="listPic">
+					<img src="../img/4.jpg" alt="">
+				</div>
+				<div class="listCont">
+					<h3 class="houseTitle">金碧二期 格局方正 厅直出阳台 采光通透</h3><br>
+					<span class="houseMm">3室2厅/89m²/南/金碧</span><br>
+					<span class="housePrice"><em>425万</em>52302元/平方</span>
+					<ul class="houseTips">
+						<li>近地铁</li>
+						<li>随时看房</li>
+						<li>有电梯</li>
+					</ul>
+				</div>
+			</a>
+			<div class="lbw-moreSource">更多相似房源</div>
+		</div>
+		<div class="lbw-white" style="background: #eee;height: 40px;"></div>
+		<div class="lbw-eighthMoudle">
+			<div class="lbw-eighthTitle"><h3>我有房子要卖</h3></div>
+			<div class="lbw-eighthContain">
+				<div class="lbw-eighthContain1">
+					<dl>
+						<dt class="lbw-eighthNumber">8000+</dt>
+						<dd class="lbw-eighthExplain">全国链家门店</dd>
+					</dl>
+				</div>
+				<div class="lbw-eighthContain1">
+					<dl>
+						<dt class="lbw-eighthNumber">10万+</dt>
+						<dd class="lbw-eighthExplain">全国经纪人</dd>
+					</dl>
+				</div>
+				<div class="lbw-eighthContain1">
+					<dl>
+						<dt class="lbw-eighthNumber">15年+</dt>
+						<dd class="lbw-eighthExplain">链家倾情服务</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="lbw-eighthSale"><a href="#">去卖房</a></div>
+		</div>	
+</body>
+</html>

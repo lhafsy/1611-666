@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/common.css">
+
+	<script src="../lib/jquery-2.1.1.min.js"></script>
+	<script src="../lib/angular.min.js"></script>
+	<script src="../js/login.js"></script>
+	<script src="../js/commonLogin.js"></script>
+	<!-- <script src="../lib/login.js"></script> -->
+
+<!-- 	<script type="text/javascript">
+        $(function(){
+            $(".top span").click(function(){
+            	console.log(11)
+                var $this = $(this),
+                    index = $this.index();
+                $this.addClass("active").siblings("span").removeClass("active");
+
+                $(".main .loginMsg").eq(index).addClass("selected").siblings("div").removeClass("selected");
+            });
+        });
+
+
+    </script> -->
+
+</head>
+<body ng-app="myapp" ng-controller="mycontroller">
+	<div class="topBack">
+		<i></i>
+	</div>
+	<div>
+		
+		<div class="top clear" >
+			<span class="active">普通登录</span>
+			<span>验证码快捷登录</span>
+		</div>
+		<div class="main">
+		    <div class="loginMsg selected">
+		        <div class="input_area border">
+				<input type="text" id="pwd_tel" placeholder="请输入手机号码" name="mobile_phone_no" ng-model="name">
+				</div>
+				<div class="input_area border">
+				    <input name="password" id="pwd_pwd" type="password" placeholder="请输入密码" ng-model="psw">
+				</div>
+				<div class="input_area">
+					<input name="pic_verify_num" class="short_input" type="text" placeholder="请输入图片中的验证码">
+					<span></span>
+				</div>
+				<div class="login"><input type="button" value="立即登录" class="loginBtn" ng-click="Btn()"></div>
+				<div class="link">
+				    <a href="register.html">立即注册</a>
+				    <a href="#">忘记密码</a>
+				</div>
+		    	
+		    </div>
+		    <div  class="loginMsg">
+		        <div class="input_area border">
+					<input type="text" id="name" placeholder="请输入手机号码" name="mobile_phone_no">
+					<a href="#">发送验证码</a>
+				</div>
+				<div class="input_area border">
+				    <input name="password" id="pwd_pwd" type="text" placeholder="请输入短信中的验证码">
+				</div>
+				<div class="input_area">
+					<input name="pic_verify_num" class="short_input" type="text" placeholder="请输入图片中的验证码">
+					<span></span>
+				</div>
+				<div class="login"><input type="button" value="验证并登录" class="loginBtn"></div>
+				<div class="link">
+				    <a href="register.html">立即注册</a>
+				    <a href="#">忘记密码</a>
+				</div>
+		    	
+		    </div>
+			
+		</div>
+	</div>
+
+
+	
+</body>
+</html>
+<!-- <script>
+	var myApp = angular.module('myapp',['commonApp']);
+    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
+
+
+    	$scope.Btn = function(){
+
+
+	    	console.log($scope.name);
+	    	console.log($scope.psw);
+
+            
+	    	$http({
+		        url:'http://localhost:88/'+'html/login',
+		        data:{name:$scope.name,password:$scope.psw},
+		        method:'post'
+		      }).success(function(data){
+		       alert("登录成功");
+		       location.href = "index.html";
+		       
+		     })
+    	}
+     
+    }]) ;
+  
+
+</script> -->
+	

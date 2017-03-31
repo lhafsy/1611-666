@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>败家网分页</title>
+    <link rel="stylesheet" href="../css/Tl_fang.css">
+    <link rel="stylesheet" href="../css/Tl.base.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/overall-situation.css">
+    <script src='../lib/require.js' data-main="../js/app.js"></script>
+    <script src='../lib/jquery-2.1.1.min.js'></script>
+</head>
+
+<body>
+    <div class="Tl_page">
+        <!-- 头部 -->
+        <!-- 头部背景 -->
+        <div class="head_xinfang" style="background:url(../img/phpwQ7VSf1480499002.png.750x.jpg) center center no-repeat">
+            <div class="slogan"></div>
+        </div>
+        <!-- 房源内容 -->
+        <div class="Tl_mod_box house_lists clear">
+            <!-- 房源分区 -->
+            <div class="search_xinfang">
+                <ul class="clear">
+                    <li class="li box_col">
+                        <a href="#">一居</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#">二居</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#">三居</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#">50-80万</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#">80-100万</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#">100-120万</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#">近地铁</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#">在售楼盘</a>
+                    </li>
+                    <li class="li box_col">
+                        <a href="#"><span>全部></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mod_box">
+                <div class="pic_box">
+                    <a href="#">
+                        <img src="../img/phpSjncTS1478672286.png.750x.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 房源列表 -->
+        <div class="house_lists">
+            <h3 class="Tl_mod_tit">推荐楼盘</h3>
+            <div class="mod_cont">
+            	<ul class="lists">
+            		<li class="pictext">
+            			<a href="#">
+            				<div class="L_mod_media">
+            					<img src="../img/house1.jpg" alt="">
+            					<span class="note_design">效果图</span>
+            				</div>
+            				<div class="R_item_list">
+            					<div class="item_main"><span>广州万达文化旅游城</span></div>
+            					<div class="item_other"><span>花都平步大道与曙光路交汇处</span></div>
+            					<div class="item_other">
+            						<span class="location">建面 91~135m²</span>
+            						<span class="price_total">22000<i class="normal">元/平</i></span>
+            					</div>
+            					<div class="tag_box">
+            						<span class="tag">在售</span>
+            						<span class="tag">普通住宅</span>
+            						<span class="tag">五证齐全</span>
+            						<span class="tag">车位充足</span>
+            					</div>
+            				</div>
+            			</a>
+            		</li>
+            	</ul>
+            </div>
+        </div>
+        <!-- 底部 -->
+    </div>
+    <script>
+    // var homeApp = angular.module('homeApp', []);
+    // homeApp.controller('homeController', ['$scope', '$http', function($scope, $http) {
+    //         $http.get('http://localhost:88/lha').success(function(response) {
+    //             console.log(response);
+    //         })
+    //     }])
+    var str = "";
+    $.ajax({
+        url: 'http://localhost:88/index',
+        type: 'GET',
+        success: function(data) {
+            for (var i = 0; i < data.length; i++) {
+                str = '<li class="pictext">\
+            			<a href="#">\
+            				<div class="L_mod_media">\
+            					<img src="'+data[i].homeImg+'" alt="">\
+            					<span class="note_design">效果图</span>\
+            				</div>\
+            				<div class="R_item_list">\
+            					<div class="item_main"><span>'+data[i].homeMessage+'</span></div>\
+            					<div class="item_other"><span>'+data[i].homeAdress+'</span></div>\
+            					<div class="item_other">\
+            						<span class="location">建面 '+data[i].homeArea+'</span>\
+            						<span class="price_total">'+data[i].homeSizes+'<i class="normal">元/平</i></span>\
+            					</div>\
+            					<div class="tag_box">\
+            						<span class="tag">在售</span>\
+            						<span class="tag">普通住宅</span>\
+            						<span class="tag">五证齐全</span>\
+            						<span class="tag">车位充足</span>\
+            					</div>\
+            				</div>\
+            			</a>\
+            		</li>'
+            }
+            console.log(data);
+            $('.lists').append(str);
+        }
+    })
+    </script>
+</body>
+
+</html>

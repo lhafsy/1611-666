@@ -1,0 +1,59 @@
+/*底部固定栏css*/
+.lbw-foot{padding: 2rem 1rem 0 1rem;background: #f3eded;height: 6rem;position: fixed;bottom: 0;left: 0;width: 100%;}
+.lbw-foot-son{width: 33%;float:left;}
+.lbw-foot-son img{display: block;height: 5rem;text-align: center;margin: 0 auto;}
+
+/*头部返回样式*/
+.topBack{
+    width: 100%;
+    height: 3rem;
+    /*display: inline-block;*/
+    font-size: 1.5rem;
+    background: #eee;
+}
+
+.topBack > i{
+    width: 100%;
+    height: 3rem;
+    /*display: inline-block;*/
+    font-size: 1.5rem;
+    background: #eee;
+}
+
+/*地图样式*/
+#container {width:100%; height: 500px; }  
+#panel {
+    position: absolute;
+    background-color: white;
+    max-height: 100%;
+    overflow-y: auto;
+    top: 10px;
+    right: 10px;
+    width: 280px;
+}      
+
+/*锚链接样式 */
+.runtoTop{
+    width: 5rem;
+    height: 5.6rem;
+    position: fixed;
+    bottom: 4rem; 
+    right: 2rem;
+    z-index: 99;
+    margin-right: 3rem;
+    overflow: hidden;
+    display: none;
+}
+.runtoTop > img{
+    width: 5rem;
+    height: 11.2rem;
+    font-size: 3rem;
+}
+
+/*轮播图样式*/
+.imgbox{width:61.5rem;height:100%;overflow:hidden;margin:0 auto;}
+.imgbox ul{clear:both;width:184.5rem;height: 100%;overflow:hidden;}
+.imgbox ul li{float:left;width:61.5rem;height:100%;text-align:center;}
+.imgbox ul li img{width:61.5rem;height:100%;}
+
+
