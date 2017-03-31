@@ -15,7 +15,11 @@
     <div class="top_header clear">
       
         <div class="topLeft">
+<<<<<<< HEAD
         	<a href="http://localhost:88/index.html" class="logo_wrap"><span class="logo"></span></a>
+=======
+        	<a href="http://localhost:88/index/index.html" class="logo_wrap"><span class="logoo">爱家网</span></a>
+>>>>>>> 3f6872a1b85ab34d6af616e76f13943efd37bc8a
         	<a href="../html/City.html" class="City_wrap"><span class="City"><em>广州</em><i class="icon_pull"></i></span></a>
         </div>  
     	<div class="topRight">
@@ -74,11 +78,13 @@ $(function(){
         $('.user_btn').remove();
         $('.removeLogin').append(' <a href="#!" id="removeLogin">退出</a>')
     }else if(username){
+        $(".removeLogin").css("display", "block")
         $('.top_banner').append('<div class="userID">欢迎你：'+getCookie('username') +'</div>' );
         $('.user_btn').remove();
-        $('.removeLogin').append(' <input type="button" id="removeLogin" value="退出">')
-    }  
-
+    }else{
+        $(".removeLogin").css("display", "none")
+    }
+    
     $("#removeLogin").click(function(){
         removeCookie('username');
         location.href = "http://localhost:88/html/userInfo.html";
