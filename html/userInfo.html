@@ -77,16 +77,10 @@ $(function(){
         $(".removeLogin").css("display", "block")
         $('.top_banner').append('<div class="userID">欢迎你：'+getCookie('username') +'</div>' );
         $('.user_btn').remove();
-<<<<<<< HEAD
     }else{
         $(".removeLogin").css("display", "none")
-
     }
-=======
-        $('.removeLogin').append(' <input type="button" id="removeLogin" value="退出">')
-    }  
->>>>>>> 80c443ef26ce25d321640bf24e2312b816447e4c
-
+    
     $("#removeLogin").click(function(){
         removeCookie('username');
         location.href = "http://localhost:88/html/userInfo.html";

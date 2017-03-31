@@ -9,7 +9,7 @@ var mysql = require('mysql');
 //连接mysql所需的用户名和密码
 var server = mysql.createConnection({
   user:'root',
-  database:'hq',
+  database:'shijianfeishi',
   password:''
 });
 //加载 body-parser 中间件（第三方模块）
