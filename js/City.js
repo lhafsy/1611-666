@@ -11,7 +11,7 @@ $(function(){
           $('#thisCity').html($this);
       })
       $('#thisCity').click(function(){
-        location.href = "../index/index.html?"+"name="+$(this).html();
+        location.href = "../index.html?"+"name="+$(this).html();
       })
       // $('#front').click(function(){
       //     $('.moreCity').css('display','block');
