@@ -56,8 +56,8 @@
         </ul>
     </div>
 </div>
-<div class="removeLogin">
-    <a href="#!" id="removeLogin">退出</a>
+<div class="removeLogin"> 
+
 </div>
 </body>
 </html>
@@ -72,14 +72,20 @@ $(function(){
         
         $('.top_banner').append('<div class="userID">欢迎你：'+id +'</div>' );
         $('.user_btn').remove();
+        $('.removeLogin').append(' <a href="#!" id="removeLogin">退出</a>')
     }else if(username){
         $(".removeLogin").css("display", "block")
         $('.top_banner').append('<div class="userID">欢迎你：'+getCookie('username') +'</div>' );
         $('.user_btn').remove();
+<<<<<<< HEAD
     }else{
         $(".removeLogin").css("display", "none")
 
     }
+=======
+        $('.removeLogin').append(' <input type="button" id="removeLogin" value="退出">')
+    }  
+>>>>>>> 80c443ef26ce25d321640bf24e2312b816447e4c
 
     $("#removeLogin").click(function(){
         removeCookie('username');
