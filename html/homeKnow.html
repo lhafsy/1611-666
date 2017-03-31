@@ -7,8 +7,9 @@
   <link rel="stylesheet" type="text/css" href="../css/overallSituation.css">
   <link rel="stylesheet" href="../css/homeKnow.css">
   <script src="../lib/jquery-2.1.1.min.js"></script>
+  <script src="../lib/angular.min.js"></script>
 </head>
-<body>
+<body >
   <div id="pagingHead box">
     <div id="pagingHeadLeft">
       <a href="http://localhost:88/index/index.html"><p id="pagingHeadLeft1">爱家网</p></a>
@@ -25,34 +26,29 @@
   </form>
   <div id="q">
     <ul id="w"  class="box">
-      <li class="z1">二手房</li>
-      <li class="z2">新房</li>
-      <li class="z3">卖房</li>
-      <li class="z4">换房</li>
+      <li class="z1" >二手房</li>
+      <li class="z2" >新房</li>
+      <li class="z3" >卖房</li>
+      <li class="z4" >换房</li>
     </ul>
   </div>
 
 
   <div id="a">
     <ul id="b">
-      <li><a>准备买房</a></li>
-      <li><a>看房/定房</a></li>
-      <li><a>签约/定房</a></li>
-      <li><a>全款/贷款</a></li>
-      <li><a>缴税/过户</a></li>
-      <li><a>入住/交接</a></li>
-      <li><a>买房风险</a></li>
+      <li ><a>准备买房</a></li>
+      <li ><a>看房/定房</a></li>
+      <li ><a>签约/定房</a></li>
+      <li ><a>全款/贷款</a></li>
+      <li ><a>缴税/过户</a></li>
+      <li ><a>入住/交接</a></li>
+      <li ><a>买房风险</a></li>
+      <li ><a>买房风险</a></li>
     </ul>
 
 
     <ul id="c">
-      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
-      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
-      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
-      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
-      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
-      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
-      <li><h3>买房就选买家网</h3><p>新房</p><p>新房</p></li>
+      <h4>写数据库的跑路了,没有数据</h4>
     </ul>
 
 
@@ -75,10 +71,16 @@
       $(this).css({'background-color':'#fff','font-weight': '700'})
     })
 
-
-
-
     $(document).on('click','.z1',function(){
+     var str1="<li ><a>准备买房</a></li>\
+     <li ><a>看房/定房</a></li>\
+     <li ><a>签约/定房</a></li>\
+     <li ><a>全款/贷款</a></li>\
+     <li ><a>缴税/过户</a></li>\
+     <li ><a>入住/交接</a></li>\
+     <li ><a>退房/维权</a></li>\
+      <li ><a>买房风险</a></li>"
+      document.getElementById('b').innerHTML=str1;
      $('.z22').addClass('z2')
      $('.z22').removeClass('z22');
      $('.z33').addClass('z3')
@@ -91,6 +93,14 @@
    })
 
     $(document).on('click','.z2',function(){
+     var str2="<li ><a>准备买房</a></li>\
+     <li ><a>认购新房</a></li>\
+     <li ><a>签约/定房</a></li>\
+     <li ><a>全款/贷款</a></li>\
+     <li ><a>收房/验房</a></li>\
+     <li ><a>装修/入住</a></li>\
+     <li ><a>退房/维权</a></li>"
+      document.getElementById('b').innerHTML=str2;
      $('.z11').addClass('z1')
      $('.z11').removeClass('z11');
      $('.z44').addClass('z4')
@@ -103,7 +113,17 @@
    })
 
 
+
     $(document).on('click','.z3',function(){
+     var str3="<li ><a>准备卖房</a></li>\
+     <li ><a>产权核验</a></li>\
+     <li ><a>收定金/签约</a></li>\
+     <li ><a>分步收款</a></li>\
+     <li ><a>缴税/过户</a></li>\
+     <li ><a>交房须知</a></li>\
+     <li ><a>买房风险</a></li>"
+      document.getElementById('b').innerHTML=str3;
+
      $('.z11').addClass('z1')
      $('.z11').removeClass('z11');
      $('.z44').addClass('z4')
@@ -118,16 +138,26 @@
 
 
     $(document).on('click','.z4',function(){
+     var str4="<li ><a>准备换房</a></li>\
+     <li ><a>换房方案</a></li>\
+     <li ><a>卖旧/买新</a></li>\
+     <li ><a>缴税/过户</a></li>\
+     <li ><a>缴税/过户</a></li>\
+     <li ><a>交房/收房</a></li>\
+     <li ><a>买房风险</a></li>\
+     <li ><a>换房风险</a></li>"
+      document.getElementById('b').innerHTML=str4;
+
      $('.z11').addClass('z1')
      $('.z11').removeClass('z11');
      $('.z22').addClass('z2')
      $('.z22').removeClass('z22');
      $('.z33').addClass('z3')
      $('.z33').removeClass('z33');
-
      $(this).removeClass();
      $(this).addClass('z44')
    })
+
 
 
 
