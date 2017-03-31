@@ -10,7 +10,7 @@ define(['jquery',"template"],function($,template){
  		      <span id="pagingHeadLeft2">动态获取</span>\
  		      <span id="pagingHeadLeft3"><span>暂定</span><i></i></span>\
  		      <div id="pagingHeadRight">\
- 		        <a href="#" id="pagingHeadRight1"><i></i><span>我的</span></a>\
+ 		        <a href="../html/userInfo.html" id="pagingHeadRight1"><i></i><span>我的</span></a>\
  		        <a href="#" id="pagingHeadRight2"><i></i><span>APP</span></a>\
  	      </div>\
  	    </div>'),
