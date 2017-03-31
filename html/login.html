@@ -11,30 +11,13 @@
 	<script src="../lib/angular.min.js"></script>
 	<script src="../js/login.js"></script>
 	<script src="../js/commonLogin.js"></script>
-	<!-- <script src="../lib/login.js"></script> -->
-
-<!-- 	<script type="text/javascript">
-        $(function(){
-            $(".top span").click(function(){
-            	console.log(11)
-                var $this = $(this),
-                    index = $this.index();
-                $this.addClass("active").siblings("span").removeClass("active");
-
-                $(".main .loginMsg").eq(index).addClass("selected").siblings("div").removeClass("selected");
-            });
-        });
-
-
-    </script> -->
-
+	<script src="../js/common.js"></script>
 </head>
 <body ng-app="myapp" ng-controller="mycontroller">
 	<div class="topBack">
 		<i></i>
 	</div>
-	<div>
-		
+	<div style="width:100%">
 		<div class="top clear" >
 			<span class="active">普通登录</span>
 			<span>验证码快捷登录</span>
@@ -80,36 +63,11 @@
 			
 		</div>
 	</div>
-
-
-	
+	<div class="lbw-foot2">
+      <div class="lbw-foot-son2"><a href="http://localhost:88/index/index.html"><img src="../../img/house.png"></a></div>
+      <div class="lbw-foot-son2"><a href=""><img src="../../img/message.png"></a></div>
+      <div class="lbw-foot-son2"><a href="http://localhost:88/html/login.html"><img src="../../img/contacts.png"></a></div>
+    </div>
 </body>
 </html>
-<!-- <script>
-	var myApp = angular.module('myapp',['commonApp']);
-    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
-
-
-    	$scope.Btn = function(){
-
-
-	    	console.log($scope.name);
-	    	console.log($scope.psw);
-
-            
-	    	$http({
-		        url:'http://localhost:88/'+'html/login',
-		        data:{name:$scope.name,password:$scope.psw},
-		        method:'post'
-		      }).success(function(data){
-		       alert("登录成功");
-		       location.href = "index.html";
-		       
-		     })
-    	}
-     
-    }]) ;
-  
-
-</script> -->
 	

@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<link rel="stylesheet" href="../css/userInfo.css">
     <script src="../lib/jquery-2.1.1.min.js"></script>
+    <script src="../lib/angular.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/login.js"></script>
 </head>
@@ -52,12 +53,8 @@
                 <li>
                     <a href="#">免电话营销</a><span class="list_item shiled"></span><span class="right_arrow"></span>
                 </li>
-
         </ul>
-
-        
     </div>
-	
 </div>
 <div class="removeLogin">
     <a href="#!" id="removeLogin">退出</a>
@@ -68,8 +65,6 @@
 $(function(){
     var str = location.search.slice(1);
     var arr = str.split("=");
-
-    console.log( arr[1]);
     var id= arr[1];
     var username = getCookie('username');
 
@@ -86,7 +81,5 @@ $(function(){
         removeCookie('username');
         location.href = "http://localhost:88/html/userInfo.html";
     })
-
-
 })
 </script>

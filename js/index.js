@@ -16,10 +16,8 @@ $(function(){
             auto : true,//自动切换
             callback : function(ind){//这里传过来的是索引值
                 $('#page').text(ind+1);
-                // console.log(ind)
                 var page = document.getElementById("page");
     			var pageNum = page.innerHTML;
-    			// console.log(pageNum)
     			$('.changB').css("background", "#ccc");
     			$('#changB'+pageNum).css("background", "green");
             }
@@ -32,19 +30,14 @@ $(function(){
       $http({
         url:'http://localhost:88/index',
         method:'get',
-        // dataType:"jsonp",
       }).success(function(data){
-        // var data=JSON.parse(data)
         var str="";
         var strli = "";
-        // console.log(data)
         for(var i = 0; i < data.length; i++){
-            // console.log(typeof data[i].homeSeat)
             var ss=JSON.parse(data[i].homeSeat)
-            console.log(data[i].homeId)
         str='<a href="http://localhost:88/html/list.html?id='+data[i].homeId+'" class="listType">\
         <div class="listPic">\
-            <img alt="" class="lazy" src="'+data[i].homeImg+'" >\
+            <img alt="" src="'+data[i].homeImg+'">\
         </div>\
         <div class="listCont">\
             <h3 class="houseTitle">'+data[i].homeMessage+'</h3><br>\
@@ -57,21 +50,13 @@ $(function(){
             </ul>\
         </div>\
         </a>'
-            // for(var j = 0; j < ss.length; j++){
-
-            //     // debugger
-            //   strli ='<li>'+ss[j].str+'</li>';
-            //     console.log(strli)
-            //   // console.log(strli)
-            // }
-            //   $(".houseTips").append(strli);
-            $(".houseList").append(str);
+        $(".houseList").append(str);
         }
 
         var num = location.search;
         var num1 = parseInt(num.substring(num.indexOf('=')+1,num.length))-1;
-        console.log(typeof num1)
-        console.log( num1)
+
+       
         // list 数据加载
         var listMsg="";
         listMsg='<div class="lbw-title">\
@@ -122,27 +107,12 @@ $(function(){
       </div>'
       $('.ics').append(listMsg);
        var dataone =JSON.parse(data[num1].Mask)
-      $scope.loop =dataone
+        console.log(dataone[0].name)
+        $scope.loop =dataone;
+      
       })
     }])
-
-    // 判断滚动条
-    // $(document).ready(function () {
-
-    //     $(window).scroll(function () {
-
-    //         var scrollTop = $(document).scrollTop(); //htm文档滚动对象距离顶部位置
-    //         //alert(scrollTop);
-    //         // var aa = $(document).scrollTop();
-    //         if(scrollTop>0){
-    //             $("#runTop").css("display","block");
-    //         }else{
-    //             $("#runTop").css("display","none");
-    //         }
-    //     })
-    // })
-
-
+    
     // 懒加载插件
     // $("img.lazy").lazyload({
     //     event : "sporty",

@@ -4,87 +4,53 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <script src="../lib/angular.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/overallSituation.css">
-  <script src="../lib/jquery-2.1.1.min.js"></script>
-  <style type="text/css">
-    .lhContent3{
-      line-height:1.5625rem
-    }
 
-  </style>
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
 </head>
 <body>
-
-
   <div id="mask"  ng-app="myapp" ng-controller='mycontroller'>
-
     <div id="lhBox">
       <h1>咨询经纪人</h1>
       <p id="gb">关闭</p>
-
       <ul>
-
-        <li ng-repeat=" x in loop">
+        <li >
           <div class="lhContent">
             <a href="#" class="lhPicture">
-              <img ng-src={{x.a}}>
-           </a>
-           <div class="lhContent1">
-            <p class="lhContent2" ng-bind="x.name"></p>
-            <p class="lhContent3"  ng-bind="x.cishu"></p>
-            <p class="lhContent3" ng-bind="x.score"></p>
-            <p class="lhContent3" ng-bind="x.pj"></p>
+            </a>
+            <div class="lhContent1">
+              <p class="lhContent2">潘远东</p>
+              <p class="lhContent3">本房带看 6次</p>
+              <p class="lhContent3">评分: 5 <span>（42人评价）</span></p>
+            </div>
+            <div class="lhContent4">
+              <a href="#">
+                <i class="lhPicture1"></i>
+              </a>
+              <a href="#" >
+                <i class="lhPicture2"></i>
+              </a>
+            </div>
+            <div class="lhInformation">本房信息由我更新维护，有变化最快得知</div>
           </div>
-          <div class="lhContent4">
-            <a href="#">
-              <i class="lhPicture1"></i>
-            </a>
-            <a href="#" >
-              <i class="lhPicture2"></i>
-            </a>
-               <a href="#" >
-              <i class="lhPicture3"></i>
-            </a>
-          </div>
-          <div class="lhInformation">本房信息由我更新维护，有变化最快得知</div>
-        </div>
-      </li>
-    </ul>
-
-
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
-
-<script>
-
-  var myApp = angular.module('myapp',[]);
-  myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
-    $http({
-      url:'http://localhost:88'+'/BombBox',
-      method:'post'
-    }).success(function(data){
-      console.log(data)
-      console.log(data[0].MaskSynopsis);
-      console.log(typeof data[0].Mask);
-      console.log(data[0].Mask);
-
-
-      var dataone =JSON.parse(data[1].Mask)
-      console.log(dataone[0].name)
-      $scope.loop =dataone
-    })
-  }])
-
-
-// [{"a":"../img/11.jpg","name":"lha","score":"评分:5 ","cishu":"本房带看4次","pj":"41评价"},{"a":"../img/22.jpg","name":"fsy","score":"评分:5","cishu":"本房带看61次","pj":"142评价"},{"a":"../img/33.jpg","name":"lhafsy","score":"评分:215","cishu":"本房带看146次","pj":"1242评价"}]
-//[{"a":"../img/11.jpg","name":"lha","score":"评分:5 ","cishu":"本房带看4次","pj":"41评价"},{"a":"../img/22.jpg","name":"fsy","score":"评分:5","cishu":"本房带看61次","pj":"142评价"}]
-//
-//[{"a":"../img/11.jpg","name":"lha","score":"评分:5 ","cishu":"本房带看4次","pj":"41评价"}]
-//[本房信息由我更新维护，有变化最快得知]
-
-
-</script>
-
+  <script>
+    var myApp = angular.module('myapp',[]);
+    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
+      $http({
+        url:'http://localhost:88/'+'BombBox',
+        method:'post',
+        data:{a:"w"}
+      }).success(function(data){
+        console.log(data)
+          console.log(data[1].homeSizes);
+           console.log(data[0].homeImg);
+      })
+    }])
+  </script>
 </body>
 </html>

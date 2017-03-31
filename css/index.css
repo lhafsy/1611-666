@@ -236,7 +236,7 @@ em{
     background-image: url("../img/sprite_index.svg");
 	background-size: 100%;
 	background-position: 0 -6.875rem;
-}
+}   
 .eleSelect > .titleSelect:nth-child(1)  .icon_home{
 	background-position: 0 -34.875rem;
 }

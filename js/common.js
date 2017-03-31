@@ -1,10 +1,7 @@
 // 判断滚动条
 $(document).ready(function () {
     $(window).scroll(function () {
-
         var scrollTop = $(document).scrollTop(); //htm文档滚动对象距离顶部位置
-        //alert(scrollTop);
-        // var aa = $(document).scrollTop();
         if(scrollTop > 100){
             $("#runTop").css("display","block");
         }else{

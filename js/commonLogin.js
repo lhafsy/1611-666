@@ -1,5 +1,3 @@
-
-
 var commonApp = angular.module('commonApp', []);
 commonApp.config(["$httpProvider", function ($httpProvider) {
     $httpProvider.defaults.transformRequest=function(obj){

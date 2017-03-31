@@ -8,7 +8,6 @@
 <link rel="stylesheet" type="text/css" href="../css/list.css">
 <link rel="stylesheet" type="text/css" href="../css/index.css">
 <link rel="stylesheet" href="../css/common.css">
-<link rel="stylesheet" type="text/css" href="../css/overallSituation1.css">
 
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=6130864c2952d60fc2d5e63d7b3aace2"></script>
 <script type="text/javascript" src="../lib/jquery-2.1.1.min.js"></script>
@@ -48,13 +47,13 @@ bottom: 1rem
 
 
 <body ng-app="myapp" ng-controller='mycontroller'>
-
 <div id="mask"  >
+
     <div id="lhBox">
       <h1>咨询经纪人</h1>
       <p id="gb">关闭</p>
-
       <ul>
+
         <li ng-repeat=" x in loop">
           <div class="lhContent">
             <a href="#" class="lhPicture">
@@ -277,8 +276,7 @@ $('#gb').on('click',function(){
    $('#mask').css('display','none')
 })
 
-
-
+ 
 
     // 获取当前位置地图
     var map = new AMap.Map('container', {

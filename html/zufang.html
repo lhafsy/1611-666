@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -47,54 +46,20 @@
                     <i class="fa fa-caret-down"></i>
                 </div>
             </div>
-            <!-- 排序 -->
-            <!-- <div class="Tl_sort_bar" style="bottom:4.28rem;">
-                <i></i>
-                <span>排序</span>
-            </div> -->
             <div class="Tl_mod_cont">
-                <ul>
-                    <!-- <li class="pictext">
-                        <a href="#" class="a_mask"></a>
-                        <div class="flexbox">
-                            <div class="mod_media">
-                                <div class="media_main">
-                                    <img src="../img/head_bg1.jpg" alt="" class="lazyload">
-                                </div>
-                            </div>
-                            <div class="item_list">
-                                <div class="item_main text_cut">保利心语花园 高层望园景 采光通风好</div>
-                                <div class="item_minor">
-                                    <div class="info">3室2厅 108m² 北</div>
-                                    <div class="price_total q_rentprice" style="text-align:right;">9000元/月</div>
-                                </div>
-                                <div class="item_other"><a href="#" class="location" style="color:#8b8b8b;">保利心语花园</a></div>
-                                <div class="tag_box">
-                                    <span class="tag haskey">随时看房</span> </div>
-                            </div>
-                        </div>
-                    </li> -->
-                </ul>
+                <ul></ul>
             </div>
         </div>
         <!-- 底部 -->
     </div>
-    <a href="#runTop" class="runtoTopp" id="runTop">
-      <img src="../img/runTop.png" alt="">
-    </a>
     <script>
-    // var homeApp = angular.module('homeApp', []);
-    // homeApp.controller('homeController', ['$scope', '$http', function($scope, $http) {
-    //         $http.get('http://localhost:88/lha').success(function(response) {
-    //             console.log(response);
-    //         })
-    //     }])
     var str = "";
     $.ajax({
         url: 'http://localhost:88/index',
         type: 'GET',
         success: function(data) {
             for (var i = 0; i < data.length; i++) {
+                var ss=JSON.parse(data[i].homeSeat)
                 str = '<li class="pictext">\
                         <a href="#" class="a_mask"></a>\
                         <div class="flexbox">\
@@ -114,13 +79,12 @@
                                     <span class="unit">' + data[i].homeSizes + '元/平</span>\
                                 </div>\
                                 <div class="tag_box">\
-                                    <span class="tag two" style="background-color:rgba(57,190,205,0.15);color:rgb(57,190,205)">' + data[i].Seat + '</span>\
-                                    <span class="tag elevator" style="background-color:rgba(76,193,236,0.15);color:rgb(76,193,236)">' + data[i].Seat + '</span>\
+                                    <span class="tag two" style="background-color:rgba(57,190,205,0.15);color:rgb(57,190,205)">' + ss[0].str + '</span>\
+                                    <span class="tag elevator" style="background-color:rgba(76,193,236,0.15);color:rgb(76,193,236)">' + "随时看房" + '</span>\
                                 </div>\
                             </div>\
                         </div>\
                     </li>'
-            // console.log(data);
             $('.Tl_mod_cont>ul').append(str);
             }
         }

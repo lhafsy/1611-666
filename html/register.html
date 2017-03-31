@@ -5,11 +5,11 @@
 	<title>注册</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<link rel="stylesheet" href="../css/login.css">
+
 	<script src="../lib/jquery-2.1.1.min.js"></script>
 	<script src="../lib/angular.min.js"></script>
 	<script src="../js/commonLogin.js"></script>
 	<script src="../js/register.js"></script>
-
 </head>
 <body>
 <div class="main" ng-app="myapp" ng-controller="mycontroller">
@@ -29,38 +29,6 @@
 			<div class="login"><input type="button" value="立即注册" class="loginBtn" ng-click="Btn()" ></div>
 	    	
 	    </div>
-		
 	</div>
-
-<!-- <script>
-
-    var myApp = angular.module('myapp',['commonApp']);
-    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
-
-
-    	$scope.Btn =function(){
-
-
-	    	console.log($scope.name);
-	    	console.log($scope.psw);
-
-            
-	    	$http({
-		        url:'http://localhost:88/'+'html/register',
-		        data:{name:$scope.name,password:$scope.psw},
-		        method:'post'
-		      }).success(function(data){
-		       alert("注册成功");
-		       location.href = "login.html";
-		       
-		     })
-    	}
-     
-    }]) ;
-  
-
-
-</script> -->
-	
 </body>
 </html>

@@ -10,7 +10,7 @@
   }
 
    #mask{
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -30,29 +30,30 @@
     overflow-y: auto;
   }
   #lhBox > h1{
-    font-size: 1.25rem;
+    font-size:2.5rem;
     height: 5.0rem;
-    line-height: 3.75rem;
+    line-height:5rem;
     padding: 1rem 1.625rem 0;
     border-bottom: 1px solid #e5e5e5;
   }
   #lhBox > p{
     position: absolute;
-    right: 0.625rem;
-    top: 0.625rem;
+    right:1.25rem;
+    top:1.875rem;
+  font-size: 1.875rem
   }
   .lhContent{
-    padding: 1.25rem 0 1.25rem 0;
+    padding: 30px 10px;
     margin-left: 1.625rem;
     margin-right:  1.625rem;
     border-bottom: 1px solid #e5e5e5;
   }
   .lhPicture{
     display:inline-block;
-    width: 2.875rem;
-    height: 2.875rem;
+    width: 200px;
+    height:200px;
     overflow: hidden;
-    border-radius: 2.875rem;
+    border-radius:50%;
   }
   .lhPicture img{
     width: 100%;
@@ -62,53 +63,63 @@
     display: inline-block;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
-    margin-left: .75rem;
+    margin-left:40px;
+    margin-top: 20px;
+    width: 200px;
   }
-  .lhContent1 span{
-    color: #9c9fa1;
-  }
+
   .lhInformation{
     background-color: #f9f9f9;
-    height: 2.125rem;
-    line-height: 2.125rem;
-    font-size: .8125rem;
-    margin-top: 1.25rem;
-    padding-left: .5rem;
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    padding-left:20px;
     color: #9c9fa1;
   }
   .lhContent2{
-    font-size: 1rem;
-    line-height: 1.25rem;
-    margin-top: -.125rem;
+    font-size:60px;
+    display: inline-block;
+    margin-top: -50px
   }
   .lhContent3{
-    font-size: .6875rem;
-    line-height: 1.06875rem;
+    font-size: 30px;
+    margin: 10px 0;
   }
+
+
   .lhContent4{
     display: inline-block;
     position: relative;
-    width: 6rem;
+    width: 200px;
+    height: 50px;
     text-align: right;
 }
 
 .lhPicture1{
   background-position: 0 -23.625rem;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 30px;
+  height: 30px;
+  transform:scale(3,3);
   background-repeat: no-repeat;
   background-image: url(../img/Mask.svg);
   background-size: 2rem 49.25rem;
+  position: absolute;
+  top: -40px;
+  left: 40px
 }
 .lhPicture2{
   background-position: 0 -7.875rem;
   display: inline-block;
   width: 2rem;
   height: 2rem;
+  transform:scale(3,3);
   background-repeat: no-repeat;
   background-image: url(../img/Mask.svg);
-  background-size: 2rem 49.25rem
+  background-size: 2rem 49.25rem;
+    position: absolute;
+    top: -40px;
+  left: 200px
 }
 
 
@@ -245,3 +256,4 @@
  #pagingHeadRight1 span,  #pagingHeadRight2 span{
   display: block;
   padding-top: .125rem;
+}
