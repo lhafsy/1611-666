@@ -183,7 +183,10 @@
     margin: 0 .75rem 0 .5rem;
     font-size:0.875rem;
     text-align: right;
-    line-height: 2rem
+    line-height: 2rem;
+  }
+  #pagingHeadLeft1 > a{
+    color: #7b7575;
   }
   #pagingHeadLeft2{
     background-color: #00ae66;

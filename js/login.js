@@ -13,8 +13,10 @@ $(".top span").click(function(){
 var myApp = angular.module('myapp',['commonApp']);
 myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
 	$scope.Btn = function(){
-		if($scope.name == " " && $scope.psw == " " ){
-			alert("用户不能为空！");
+		var name= $('#pwd_tel').val();
+		var psw= $('#pwd_pwd').val();
+		if(name == '' || psw == '' ){
+			alert("用户或密码不能为空！");
 		}else{
 			$http({
 		        url:'http://localhost:88/'+'html/login',

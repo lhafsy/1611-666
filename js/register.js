@@ -3,9 +3,13 @@ myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
 	$scope.Btn =function(){
     	console.log($scope.name);
     	console.log($scope.psw);
-        if($scope.name == " " && $scope.psw == " " ){
-			alert("用户名不能为空！");
+
+        var name= $('#name').val();
+		var psw= $('#psw').val();
+        if(name == '' ||  psw == '' ){
+				alert("用户名或密码不能为空！");
 		}else{
+			
         
 	    	$http({
 		        url:'http://localhost:88/'+'html/register',
