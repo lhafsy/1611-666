@@ -1,3 +1,7 @@
-1创建数据库shijianfeishi 然后创2个表users home（在SQL文件夹下）
-2执行Server.js
-3打开网页
+1创建数据库名字为shijianfeishi 然后创2个表users home（在SQL文件夹下）
+2执行 npm install（下载所需模块）
+3 是否需要在Server.js中设置数据库用户名与登录密码
+4在cmd中执行node Server.js
+5打开网页 http://localhost:88/
+
+感觉良好请+↑666：666、666、666、666、666、666

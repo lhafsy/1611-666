@@ -9,7 +9,7 @@ var mysql = require('mysql');
 //连接mysql所需的用户名和密码
 var server = mysql.createConnection({
   user:'root',
-  database:'lianjiawang',
+  database:'shijianfeishi',
   password:''
 });
 //加载 body-parser 中间件（第三方模块）
@@ -21,7 +21,6 @@ app.get('/index', urlencodedParser, function(request, response){
   // console.log(request.body.data)
   // console.log(request)
 
-
   //连接mysql
   server.connect(function(error,results){
     if(error){
@@ -32,7 +31,7 @@ app.get('/index', urlencodedParser, function(request, response){
       // console.log(data);
     })
   //操作mysql数据库
-  server.query("use `lianjiawang`");
+  server.query("use `shijianfeishi`");
   console.log(111)
   server.query("select * from `home`",function(err,rs,fields){
     if(err){
